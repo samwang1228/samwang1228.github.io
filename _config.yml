@@ -61,7 +61,7 @@ sidebar: true                           # whether or not using Sidebar.
 sidebar-about-description: "大家好，我是王紹丞，就讀
 長庚大學資訊工程學系，平時的興趣是畫圖跟寫程式，我將在這裡紀錄我的繪畫作品
 、金融筆記、刷題記錄、side project等，謝謝您拜訪此網站"
-sidebar-avatar: /img/me.jpg      # use absolute URL, seeing it's used in both `/` and `/about/`
+sidebar-avatar: img/me.jpg      # use absolute URL, seeing it's used in both `/` and `/about/`
 
 
 # Featured Tags
@@ -147,7 +147,7 @@ theme: huxblog
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
-# deploy:
-#   type: git
-#   repo: https://github.com/samwang1228/samwang1228.github.io.git 
-#   branch: gh-pages
+deploy:
+  type: git
+  repo: https://github.com/samwang1228/samwang1228.github.io.git 
+  branch: gh-pages
