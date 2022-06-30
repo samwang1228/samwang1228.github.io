@@ -13,11 +13,11 @@
 
     <title>
         
-          LeetCode - Sam&#39;s Blog
+          HEXO 2022 - Sam&#39;s Blog
         
     </title>
 
-    <link rel="canonical" href="https://samwang1228.github.io/2022/06/28/IMAPOST/">
+    <link rel="canonical" href="https://samwang1228.github.io/2022/06/30/HEXO/">
 
     <!-- Bootstrap Core CSS -->
     
@@ -161,7 +161,7 @@
 <!-- Post Header -->
 <style type="text/css">
     header.intro-header{
-        background-image: url('test.jpg')
+        background-image: url('hexo.png')
     }
 </style>
 <header class="intro-header" >
@@ -171,14 +171,14 @@
                 <div class="post-heading">
                     <div class="tags">
                         
-                          <a class="tag" href="/tags/#LeetCode" title="LeetCode">LeetCode</a>
+                          <a class="tag" href="/tags/#hexo" title="hexo">hexo</a>
                         
                     </div>
-                    <h1>LeetCode</h1>
-                    <h2 class="subheading">紀錄解題過程以及提供source code</h2>
+                    <h1>HEXO 2022</h1>
+                    <h2 class="subheading">用hexo以及github page建置自己的blog</h2>
                     <span class="meta">
                         Posted by Sam wang on
-                        2022-06-28
+                        2022-06-30
                     </span>
                 </div>
             </div>
@@ -197,37 +197,57 @@
                 col-md-10 col-md-offset-1
                 post-container">
 
-                <blockquote>
-<p>目錄大綱</p>
-<ul>
-<li><a href="#jump83">83.Remove Duplicates from Sorted List</a></li>
-<li><a href="#jump53">53.Maximum Subarray</a></li>
-<li><a href="#jump35">35.Search Insert Position</a></li>
-<li><a href="#jump27">27.Remove Element</a></li>
-</ul>
+                <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><blockquote>
+<p>為什麼要撰寫自己的Blog呢?</p>
 </blockquote>
-<h1 id="83-Remove-Duplicates-from-Sorted-List"><a href="#83-Remove-Duplicates-from-Sorted-List" class="headerlink" title="83.Remove Duplicates from Sorted List"></a><span id="jump83">83.Remove Duplicates from Sorted List</span></h1><h3 id="題目"><a href="#題目" class="headerlink" title="題目:"></a>題目:</h3><p>今天有一個排序後的list，若有重複的值則將其拿掉。</p>
-<h3 id="連結"><a href="#連結" class="headerlink" title="連結:"></a>連結:</h3><p><a><a target="_blank" rel="noopener" href="https://leetcode.com/problems/remove-duplicates-from-sorted-list/">https://leetcode.com/problems/remove-duplicates-from-sorted-list/</a> </a></p>
-<h3 id="範例"><a href="#範例" class="headerlink" title="範例:"></a>範例:</h3><p>Input  1-&gt;1-&gt;2-&gt;3-&gt;3<br>Output 1-&gt;2-&gt;3 //remove 1,3 </p>
-<h3 id="解題思路"><a href="#解題思路" class="headerlink" title="解題思路:"></a>解題思路:</h3><p>當前值等於下一個值就將指標直接指向下下個，以捨棄下一個，反之就繼續正常尋訪。</p>
-<font color=#FF0000>注意cur-&gt;next不釋放會造成記憶體浪費</font>
+<p>首先Blog可以記錄自己的成長且在繳交履歷時也能附上，同時也能證明自己外也能吸引別人來觀看以提升知名度。</p>
+<blockquote>
+<p>為什麼要用hexo呢?</p>
+</blockquote>
+<p>而選擇hexo是因為:</p>
+<ul>
+<li>可以部署到自己的github更能證明是自己的，<strong>同時github page是免費的</strong></li>
+<li>hexo有提供100多種模板所以美編不好的工程師也能寫出好看的Blog</li>
+<li>文章皆採用markdown語法可以讓你更專注在寫文章上，而非抵bug上 (笑</li>
+<li>hexo有許多中文教學上手很快</li>
+<li>很多套件可使用ex ga、vtuber、留言板</li>
+</ul>
+<h2 id="目錄"><a href="#目錄" class="headerlink" title="目錄"></a>目錄</h2><ul>
+<li><a href="#hexo1">1.配置環境</a></li>
+<li><a href="#hexo2">2.常用指令</a></li>
+<li><a href="#hexo3">3.git指令與windos設定</a></li>
+<li><a href="#hexo4">4.github page建置</a></li>
+<li><a href="#hexo5">5.模板使用</a></li>
+</ul>
+<h2 id="1-配置環境"><a href="#1-配置環境" class="headerlink" title="1.配置環境"></a><span id="hexo1">1.配置環境</span></h2><p>a.首先要安裝node.js <a target="_blank" rel="noopener" href="https://nodejs.org/zh-tw/download/">連結在這</a> (選擇自己對應的作業系統即可)<br>b.安裝 hexo CLI(記得先選你要的資料夾在cmd cd過去在打指令 )<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">npm install -g hexo-cli<span class="comment">//可以讓hexo使用指令的工具wls</span></span><br><span class="line">hexo init &lt;folder&gt; <span class="comment">//創建blog 這裡的名字對應資料夾名字&lt;&gt;不用照打</span></span><br><span class="line">cd &lt;folder&gt;</span><br><span class="line">npm instal <span class="comment">//下載縮需套件</span></span><br><span class="line">hexo s <span class="comment">//打開hexo server</span></span><br></pre></td></tr></table></figure><br>做完以上幾步若有跑出 Hexo is running at <a target="_blank" rel="noopener" href="http://localhost:4000/">http://localhost:4000/</a><br>且在瀏覽器打上<a target="_blank" rel="noopener" href="http://localhost:4000/">http://localhost:4000/</a> 是有東西的則代表成功!!!</p>
+<font color=#FF0000>注意:接下來沒特別提到代表都是在cd folder的路徑位置下打指令且可以用vscode的終端機打指令</font>
 
-<h3 id="source-code"><a href="#source-code" class="headerlink" title="source code:"></a>source code:</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span></span><br><span class="line">&#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function">ListNode* <span class="title">deleteDuplicates</span><span class="params">(ListNode* head)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(!head)</span><br><span class="line">            <span class="keyword">return</span> head;</span><br><span class="line">        ListNode *cur=head;</span><br><span class="line">        <span class="keyword">while</span>(cur-&gt;next)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span>(cur-&gt;val==cur-&gt;next-&gt;val)</span><br><span class="line">            &#123;</span><br><span class="line">                ListNode * temp=cur-&gt;next; <span class="comment">//釋放cur-&gt;next</span></span><br><span class="line">                cur-&gt;next=cur-&gt;next-&gt;next;</span><br><span class="line">                <span class="built_in">delete</span> (temp);</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span></span><br><span class="line">                cur=cur-&gt;next;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> head;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-<h1 id="53-Maximum-Subarray"><a href="#53-Maximum-Subarray" class="headerlink" title="53.Maximum Subarray"></a><span id="jump53">53.Maximum Subarray</span></h1><h3 id="題目-1"><a href="#題目-1" class="headerlink" title="題目:"></a>題目:</h3><p>今天有一個array，我們要找出在這個array中連續和最大的結果。</p>
-<h3 id="連結-1"><a href="#連結-1" class="headerlink" title="連結:"></a>連結:</h3><p><a><a target="_blank" rel="noopener" href="https://leetcode.com/problems/maximum-subarray/">https://leetcode.com/problems/maximum-subarray/</a> </a></p>
-<h3 id="範例-1"><a href="#範例-1" class="headerlink" title="範例:"></a>範例:</h3><p>Input: nums = [-2,1,-3,4,-1,2,1,-5,4]<br>Output: 6<br>Explanation: [4,-1,2,1] has the largest sum = 6.</p>
-<h3 id="解題思路-1"><a href="#解題思路-1" class="headerlink" title="解題思路:"></a>解題思路:</h3><p>想成是累加問題(greedy)，若加上下一個值等於負的則重新累加，反之就繼續往下加，因為今天如果是負的就可以確定當前的subarray趨勢向下沒有必要繼續，<strong>記得要每次都把當前累加後的最大值記錄下來要不然就沒意義了XDD</strong>。</p>
-<h3 id="source-code-1"><a href="#source-code-1" class="headerlink" title="source code:"></a>source code:</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="type">int</span> <span class="title">maxSubArray</span><span class="params">(vector&lt;<span class="type">int</span>&gt;&amp; nums)</span> </span>&#123;</span><br><span class="line">        <span class="type">int</span> max=nums[<span class="number">0</span>];</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>;i&lt;nums.<span class="built_in">size</span>();i++)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span>(nums[i<span class="number">-1</span>]&gt;=<span class="number">0</span>)</span><br><span class="line">                nums[i]+=nums[i<span class="number">-1</span>];</span><br><span class="line">            <span class="keyword">if</span>(max&lt;nums[i])</span><br><span class="line">                max=nums[i];</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> max;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-<h1 id="35-Search-Insert-Position"><a href="#35-Search-Insert-Position" class="headerlink" title="35.Search Insert Position"></a><span id="jump35">35.Search Insert Position</span></h1><h3 id="題目-2"><a href="#題目-2" class="headerlink" title="題目:"></a>題目:</h3><p>Given a sorted array of distinct integers and a target value, return the index  if the target is found. If not, return the index where it would be if it were inserted in order.<br><strong>You must write an algorithm with O(log n) runtime complexity.</strong></p>
-<h3 id="連結-2"><a href="#連結-2" class="headerlink" title="連結:"></a>連結:</h3><p><a><a target="_blank" rel="noopener" href="https://leetcode.com/problems/search-insert-position/">https://leetcode.com/problems/search-insert-position/</a> </a></p>
-<h3 id="範例-2"><a href="#範例-2" class="headerlink" title="範例:"></a>範例:</h3><p>Input: nums = [1,3,5,6], target = 5<br>Output: 2<br>Input: nums = [1,3,5,6], target = 7<br>Output: 4 </p>
-<h3 id="解題思路-2"><a href="#解題思路-2" class="headerlink" title="解題思路:"></a>解題思路:</h3><p>//待補</p>
-<h3 id="source-code-2"><a href="#source-code-2" class="headerlink" title="source code:"></a>source code:</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="type">int</span> <span class="title">searchInsert</span><span class="params">(vector&lt;<span class="type">int</span>&gt;&amp; nums, <span class="type">int</span> target)</span> </span>&#123;</span><br><span class="line">        <span class="type">int</span> left = <span class="number">0</span>;</span><br><span class="line">        <span class="type">int</span> right = nums.<span class="built_in">size</span>()<span class="number">-1</span>;</span><br><span class="line">        <span class="keyword">while</span> (left&lt;=right) &#123;</span><br><span class="line">          <span class="type">int</span> mid = left+(right-left)/<span class="number">2</span>;</span><br><span class="line">          <span class="keyword">if</span> (nums[mid]&gt;target) &#123;</span><br><span class="line">            right=mid<span class="number">-1</span>;</span><br><span class="line">          &#125; <span class="keyword">else</span> <span class="keyword">if</span> (nums[mid]&lt;target) &#123;</span><br><span class="line">            left=mid+<span class="number">1</span>;</span><br><span class="line">          &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            <span class="keyword">return</span> mid;</span><br><span class="line">          &#125;</span><br><span class="line">        &#125;</span><br><span class="line">            <span class="keyword">return</span> left;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-<h1 id="27-Remove-Element"><a href="#27-Remove-Element" class="headerlink" title="27.Remove Element"></a><span id="jump27">27.Remove Element</span></h1><h3 id="題目-3"><a href="#題目-3" class="headerlink" title="題目:"></a>題目:</h3><p>Explanation: Your function should return k = 2, with the first two elements of nums being 2.<br>It does not matter what you leave beyond the returned k (hence they are underscores).</p>
-<h3 id="連結-3"><a href="#連結-3" class="headerlink" title="連結:"></a>連結:</h3><p><a><a target="_blank" rel="noopener" href="https://leetcode.com/problems/remove-element/">https://leetcode.com/problems/remove-element/</a>  </a></p>
-<h3 id="範例-3"><a href="#範例-3" class="headerlink" title="範例:"></a>範例:</h3><p>Input: nums = [3,2,2,3], val = 3<br>Output: 2, nums = [2,2,_,_] Hint output (origin-val) of size and 把!=val 的值搬到vector前面</p>
-<h3 id="解題思路-3"><a href="#解題思路-3" class="headerlink" title="解題思路:"></a>解題思路:</h3><p>//待補</p>
-<h3 id="source-code-3"><a href="#source-code-3" class="headerlink" title="source code:"></a>source code:</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="type">int</span> <span class="title">removeElement</span><span class="params">(vector&lt;<span class="type">int</span>&gt;&amp; nums, <span class="type">int</span> val)</span> </span>&#123;</span><br><span class="line">        <span class="type">int</span> counter=<span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>;i&lt;nums.<span class="built_in">size</span>();i++)</span><br><span class="line">            <span class="keyword">if</span>(nums[i]!=val)</span><br><span class="line">                nums[counter++]=nums[i];</span><br><span class="line">        <span class="keyword">return</span> counter;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<h2 id="2-常用指令"><a href="#2-常用指令" class="headerlink" title="2.常用指令"></a><span id="hexo2">2.常用指令</span></h2><p>可透過hexo help看有什麼功能下面列出較常用的<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">hexo server   <span class="comment">//開啟hexo server</span></span><br><span class="line">hexo generate <span class="comment">//產生html檔案</span></span><br><span class="line">hexo clean    <span class="comment">//清除上一份產生的html file，當有換模板或大改建使用</span></span><br><span class="line">hexo deploy   <span class="comment">//push到自定義的地方ex今天type選git就是push到github</span></span><br><span class="line">hexo version  <span class="comment">//查看hexo版本</span></span><br><span class="line">hexo <span class="keyword">new</span> post filename <span class="comment">//創建新的文章且檔名叫filename.md</span></span><br></pre></td></tr></table></figure><br><strong>由於hexo的每個指令的英文單字開頭都是不一樣的所以可直接打開頭就好</strong><br>舉例:hexo server –&gt; hexo s</p>
+<h2 id="3-git指令與windos設定"><a href="#3-git指令與windos設定" class="headerlink" title="3.git指令與windos設定"></a><span id="hexo3">3.git指令與windos設定</span></h2><p>首先創建github帳號右上方有個+ 點選new repository他會叫你打你的倉庫名字</p>
+<font color=#FF0000>注意倉庫名字必須為 <strong>username.github.io</strong> username為你自己的github name</font>
+
+<p><strong>點選創建後會跳出一個充滿指令的頁面請不要關掉!!!</strong><br>然後在你剛才打過hexo server的路徑打上(也就是cd folder的位置)<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">git init</span><br><span class="line">git add .</span><br><span class="line">git commit -m <span class="string">&#x27;first commit&#x27;</span></span><br><span class="line">git branch -M main</span><br><span class="line">git remote add origin &lt;你自己的倉庫&gt; <span class="comment">//&lt;你自己的倉庫&gt;請對照充滿指令的頁面</span></span><br><span class="line">git push -u origin main</span><br></pre></td></tr></table></figure><br>若你是windows可能會在git add . 這一步遇到(若沒遇到可直接跳過至下一個主題)</p>
+<font color=#FF0000>warning: LF will be replaced by CRLF in </font>
+
+<p>這是因為 Mac 和 Windows 的換行字元有關:</p>
+<ul>
+<li>Windows/Dos 系統，採用CR+LF表示，符號\r\n</li>
+<li>現今的 Mac 系統，採用LF表示，符號\n</li>
+</ul>
+<p>接著在vscode的終端機打上<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">git config –-<span class="keyword">global</span> core.autocrlf</span><br><span class="line"><span class="comment"># 輸入該指令查看是 false 還是 true</span></span><br><span class="line">git config –-<span class="keyword">global</span> core.autocrlf false</span><br><span class="line"><span class="comment"># 這裡的意思是關閉自動轉換成crlf </span></span><br></pre></td></tr></table></figure><br>接著對vscode進行修改<br><img src="seting.png" alt="1"><br>最後在打上<br><figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="keyword">ls</span>-<span class="keyword">files</span> — eol</span><br></pre></td></tr></table></figure><br><strong> 就可以重新git add .並push啦!!!</strong></p>
+<h2 id="4-github-page建置"><a href="#4-github-page建置" class="headerlink" title="4.github page建置"></a><span id="hexo4">4.github page建置</span></h2><p>首先要在目錄底下的<strong>_config.yml</strong> 找到deploy:並提換成以下code<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">deploy</span>:</span><br><span class="line">  <span class="attr">type</span>: git</span><br><span class="line">  <span class="attr">repo</span>: 你的repo <span class="comment">//ex:git@github.com:xxxx/hexo-demo.git </span></span><br><span class="line">  <span class="attr">branch</span>: gh-pages  <span class="comment">//branch:gh-pages</span></span><br></pre></td></tr></table></figure><br>接者安裝套件以及push html file<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//push</span></span><br><span class="line">npm install hexo-deployer-git --save <span class="comment">//install hexo自動部署工具</span></span><br><span class="line">hexo g</span><br><span class="line">hexo d <span class="comment">//push public to branch:gh-pages</span></span><br></pre></td></tr></table></figure><br>再來去以下地方就能找到你的url了<br><img src="pageset.png" alt="1"><br><img src="fin.png" alt="1"></p>
+<h2 id="5-模板使用"><a href="#5-模板使用" class="headerlink" title="5.模板使用"></a><span id="hexo5">5.模板使用</span></h2><p>終於最後一步了 (灑淚<br>取此地方挑選你要的<a target="_blank" rel="noopener" href="https://hexo.io/themes/">模板link</a><br>點選圖片是查看模板demo的樣子，點選下方文字則是進到模板的github<br>進到模板的github後會有詳細的操作，統常有以下兩種:</p>
+<ul>
+<li>download zip檔後將他複製到你自己theme的資料夾裡然後在<strong>_config.yml</strong>找到theme:landscape，把landscape改成你剛才下載的模板folder name，接著在hexo c 、 hexo s查看有無成功。</li>
+<li>把zip檔解壓後直接打npm install也就是擴充作者的(步驟可能不一樣請查看作者的說明文件)</li>
+</ul>
+<p>###狀況題:</p>
+<blockquote>
+<p>hexo g 出現的html為空白時</p>
+</blockquote>
+<p>因為你的node.js與hexo版本不相容<br>方法1:更新hexo方法如下<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">npm install -g hexo-cli </span><br><span class="line">hexo version<span class="comment">//如果這裡依舊一樣</span></span><br><span class="line"></span><br><span class="line">npm install -g npm-check </span><br><span class="line">npm-check<span class="comment">//透過這個查看需更新的套件上面的msg 會告訴你指令照這打</span></span><br></pre></td></tr></table></figure><br>方法2:降低node.js版本<br><a target="_blank" rel="noopener" href="https://hexo.io/zh-tw/docs/">查看對應版本</a> 在最下面</p>
+<h2 id="結語"><a href="#結語" class="headerlink" title="結語:"></a>結語:</h2><p>我還是個blog初新者可能寫的還不是很好，若大家有遇到什麼問題歡迎在底下留言我看到會盡快回復，又或者有什麼想看的文章都可以告訴我喔！</p>
+
 
                 <hr>
 
@@ -235,10 +255,10 @@
 
                 <ul class="pager">
                     
-                        <li class="previous">
-                            <a href="/2022/06/30/HEXO/" data-toggle="tooltip" data-placement="top" title="HEXO 2022">&larr; Previous Post</a>
-                        </li>
                     
+                        <li class="next">
+                            <a href="/2022/06/28/IMAPOST/" data-toggle="tooltip" data-placement="top" title="LeetCode">Next Post &rarr;</a>
+                        </li>
                     
                 </ul>
 
@@ -270,7 +290,7 @@
                     <h5><a href="/tags/">FEATURED TAGS</a></h5>
                     <div class="tags">
                        
-                          <a class="tag" href="/tags/#LeetCode" title="LeetCode">LeetCode</a>
+                          <a class="tag" href="/tags/#hexo" title="hexo">hexo</a>
                         
                     </div>
                 </section>
@@ -310,8 +330,8 @@
 <script type="text/javascript">
     /* * * CONFIGURATION VARIABLES * * */
     var disqus_shortname = "samwang1228";
-    var disqus_identifier = "https://samwang1228.github.io/2022/06/28/IMAPOST/";
-    var disqus_url = "https://samwang1228.github.io/2022/06/28/IMAPOST/";
+    var disqus_identifier = "https://samwang1228.github.io/2022/06/30/HEXO/";
+    var disqus_url = "https://samwang1228.github.io/2022/06/30/HEXO/";
 
     (function() {
         var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
