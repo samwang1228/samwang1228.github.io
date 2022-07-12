@@ -13,11 +13,11 @@
 
     <title>
         
-          LeetCode(Easy) - Sam&#39;s Blog
+          三大法人與籌碼 - Sam&#39;s Blog
         
     </title>
 
-    <link rel="canonical" href="https://samwang1228.github.io/2022/06/28/IMAPOST/">
+    <link rel="canonical" href="https://samwang1228.github.io/institutionalInvestors/">
 
     <!-- Bootstrap Core CSS -->
     
@@ -95,10 +95,6 @@
                     
 
                         
-                        <li>
-                            <a href="/about/">About</a>
-                        </li>
-                        
                     
 
                         
@@ -110,11 +106,15 @@
 
                         
                         <li>
-                            <a href="/tags/">Tags</a>
+                            <a href="/about/">About</a>
                         </li>
                         
                     
 
+                        
+                        <li>
+                            <a href="/tags/">Tags</a>
+                        </li>
                         
                     
                     
@@ -164,7 +164,7 @@
 <!-- Post Header -->
 <style type="text/css">
     header.intro-header{
-        background-image: url('test.jpg')
+        background-image: url('temp.jpg')
     }
 </style>
 <header class="intro-header" >
@@ -174,14 +174,16 @@
                 <div class="post-heading">
                     <div class="tags">
                         
-                          <a class="tag" href="/tags/#LeetCode" title="LeetCode">LeetCode</a>
+                          <a class="tag" href="/tags/#籌碼面" title="籌碼面">籌碼面</a>
+                        
+                          <a class="tag" href="/tags/#投資教學" title="投資教學">投資教學</a>
                         
                     </div>
-                    <h1>LeetCode(Easy)</h1>
-                    <h2 class="subheading">紀錄解題過程以及提供source code</h2>
+                    <h1>三大法人與籌碼</h1>
+                    <h2 class="subheading">介紹三大法人與籌碼基礎知識</h2>
                     <span class="meta">
                         Posted by Sam wang on
-                        2022-06-28
+                        2022-07-05
                     </span>
                 </div>
             </div>
@@ -201,49 +203,112 @@
                 post-container">
 
                 <blockquote>
-<p>根據不同的題目類型進行分類，歡迎一起討論留言告訴我你的思路:)</p>
-<ul>
-<li>Linked list<ul>
-<li><a href="#jump83">83.Remove Duplicates from Sorted List</a></li>
-</ul>
-</li>
-<li>Greedy<ul>
-<li><a href="#jump53">53.Maximum Subarray</a></li>
-<li>yyyy</li>
-</ul>
-</li>
-<li>Algorithm<ul>
-<li><a href="#jump35">35.Search Insert Position</a></li>
-</ul>
-</li>
-<li>Basic Logic<ul>
-<li><a href="#jump27">27.Remove Element</a></li>
-</ul>
-</li>
-</ul>
+<p>前言<br>影響股價最劇烈的往往是籌碼面，然而你連三大法人是什麼都不知道嗎?<br>知道三大法人卻不知道有什麼用嗎?</p>
 </blockquote>
-<h1 id="83-Remove-Duplicates-from-Sorted-List"><a href="#83-Remove-Duplicates-from-Sorted-List" class="headerlink" title="83.Remove Duplicates from Sorted List"></a><span id="jump83">83.Remove Duplicates from Sorted List</span></h1><h3 id="題目"><a href="#題目" class="headerlink" title="題目:"></a>題目:</h3><p>今天有一個排序後的list，若有重複的值則將其拿掉。</p>
-<h3 id="連結"><a href="#連結" class="headerlink" title="連結:"></a>連結:</h3><p><a><a target="_blank" rel="noopener" href="https://leetcode.com/problems/remove-duplicates-from-sorted-list/">https://leetcode.com/problems/remove-duplicates-from-sorted-list/</a> </a></p>
-<h3 id="範例"><a href="#範例" class="headerlink" title="範例:"></a>範例:</h3><p>Input  1-&gt;1-&gt;2-&gt;3-&gt;3<br>Output 1-&gt;2-&gt;3 //remove 1,3 </p>
-<h3 id="解題思路"><a href="#解題思路" class="headerlink" title="解題思路:"></a>解題思路:</h3><p>當前值等於下一個值就將指標直接指向下下個，以捨棄下一個，反之就繼續正常尋訪。</p>
-<font color=#FF0000>注意cur-&gt;next不釋放會造成記憶體浪費</font>
+<p><strong> 看這篇就對了! </strong></p>
+<h2 id="介紹"><a href="#介紹" class="headerlink" title="介紹"></a>介紹</h2><p>首先法人有分自然人與法人</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">——</th>
+<th><div style="width:100px">法人</div></th>
+<th><div style="width:100px">自然人</div></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">單位</td>
+<td>公司、協會、基金會等組織單位<br/>是被法律所承認的機構團體</td>
+<td>你、我、他等享有基本人權的個人</td>
+</tr>
+<tr>
+<td style="text-align:left">地位</td>
+<td>外資、投信、自營商等三大法人</td>
+<td>像我們這樣的散戶QAQ</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>搞懂後一定還會有一個疑問，外資、投信、自營商又是什麼呢?</p>
+</blockquote>
+<h2 id="外資"><a href="#外資" class="headerlink" title="外資"></a>外資</h2><p>顧名思義就是台灣以外的外國機構投資者，目前的台股外資的資金比例比其他兩個法人多出許多，重視基本面偏好中大型股像是台積電。<br><strong> 常見外資有「美林」、「摩根史坦利」、「瑞士信貸」等</strong></p>
+<h2 id="投信"><a href="#投信" class="headerlink" title="投信"></a>投信</h2><p>跟外資不同的是，投信是指我國基金公司，全名為證劵投資信託公司<br>偏好波段操作、短線進出，以中小型股為標的，此類型股票容易靠交易量飆升進而影響股價<font color='red'>他們的本金則是我們這些散戶聚集出來的(定存、保險)，並交給他們的基金經理人操盤</font>。<br><strong>像是元大、日盛、統一、富邦等</strong></p>
+<h2 id="自營商"><a href="#自營商" class="headerlink" title="自營商"></a>自營商</h2><p>為台灣國內政劵公司，但是是使用企業自有的資金來投資他們的策略有:</p>
+<ul>
+<li>自行買賣<ul>
+<li>針對不錯股票進行買賣</li>
+<li>追求報酬並進行短線操作</li>
+<li>散戶難以捉摸自營商進行操作</li>
+</ul>
+</li>
+<li>避嫌<ul>
+<li>因散戶大量購買權證股票上漲，也使自營商賠錢時</li>
+<li>買進同檔股票的權證來平衡損益</li>
+</ul>
+</li>
+</ul>
+<p><strong>注意:因此自營商買進股票不代表真的看好</strong></p>
+<blockquote>
+<p>看到這裡相信大家有一定程度的了解，但又要怎麼透過這些訊息操作呢?</p>
+</blockquote>
+<h2 id="法人買賣超"><a href="#法人買賣超" class="headerlink" title="法人買賣超"></a>法人買賣超</h2><ul>
+<li>買超<ul>
+<li>當買進張數大於賣出張數時</li>
+</ul>
+</li>
+<li>賣超<ul>
+<li>當賣出張數大於買進張數時</li>
+</ul>
+</li>
+</ul>
+<p><strong>從字面上來看買超是不錯的訊號，但事實上如果因法人買超就去追股票是很容易賠錢的</strong><br>因為當大家都知道買超時，散戶就可能因此買股票，然而在買超時股票已被抬轎一陣子，因此很有可能會被套在高點，且法人也知道散戶已經知道了，怎麼能放過機會一定會開始慢慢賣出去，因為這些法人一買就是好幾張賣也是，所以必然有人需來接刀，此時分批賣出這些主力就能爽賺那些看買超的散戶了，除此之外，有些法人很喜歡隔天叫賣光股票。</p>
+<blockquote>
+<p>你知道什麼是隔日衝與當沖嗎?</p>
+</blockquote>
+<h2 id="隔日衝與當沖"><a href="#隔日衝與當沖" class="headerlink" title="隔日衝與當沖"></a>隔日衝與當沖</h2><table>
+<thead>
+<tr>
+<th><div style="width:100px">隔日衝</div></th>
+<th><div style="width:150x">當沖</div></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>今天買，當天賣</td>
+<td>今天買，明天賣</td>
+</tr>
+<tr>
+<td>開戶必須滿三個月，且一年內下單<br/>超過十筆的投資人</td>
+<td>沒有限制，只要開戶就能</td>
+</tr>
+</tbody>
+</table>
+<p>剛剛說到法人的買賣都是大量的，因此很容易他們一買就大漲，他們一賣就大跌，若今天他們在昨天大買使股價大漲，隔天大賣使股價大跌會如何呢?<br><img src="QAQ.png" alt="1"><br><strong><font color='red' size=48><center>沒錯就是隔天開高走低</center></font></strong></p>
+<blockquote>
+<p>那要怎麼避免此情況呢?</p>
+</blockquote>
+<p>事實上有很多法人的操作都很喜歡隔日沖，沖到大家都知道了還是嚴守紀律(笑<br><strong><a target="_blank" rel="noopener" href="https://finance.ettoday.net/news/2051646">像是我大凱基</a></strong><br>由於隔日沖法人可能因時間有所不同而有不同，這裡就不一個個列出了，<a target="_blank" rel="noopener" href="https://www.google.com/search?q=%E9%9A%94%E6%97%A5%E6%B2%96%E5%88%B8%E5%95%86&amp;oq=%E9%9A%94%E6%97%A5&amp;aqs=chrome.2.69i57j0i512l9.2738j0j7&amp;sourceid=chrome&amp;ie=UTF-8">請自行google隔日沖劵商</a></p>
+<blockquote>
+<p>那要如何查詢呢?</p>
+</blockquote>
+<p>這裡我用投資先生來舉例，在個股查詢後點選籌碼欄位</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">昨天的買方</th>
+<th style="text-align:center">今天的賣方</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><img src="buy.png" alt="buy"></td>
+<td style="text-align:center"><img src="put.png" alt="sell"></td>
+</tr>
+</tbody>
+</table>
+<p><strong><font size=5>結論:當你看到當天籌碼都是那些證卷商請盡量隔天一開盤就賣(大約5點多會公布)!!!</font></strong></p>
+<h2 id="例外題"><a href="#例外題" class="headerlink" title="例外題"></a>例外題</h2><p>有時隔日衝來拉股票不代表是壞事，反而能讓股價創新高，那要怎麼看呢?<br>嘿嘿不告訴你，除非幫我按讚留言，感謝您的觀看!</p>
 
-<h3 id="source-code"><a href="#source-code" class="headerlink" title="source code:"></a>source code:</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span></span><br><span class="line">&#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function">ListNode* <span class="title">deleteDuplicates</span><span class="params">(ListNode* head)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(!head)</span><br><span class="line">            <span class="keyword">return</span> head;</span><br><span class="line">        ListNode *cur=head;</span><br><span class="line">        <span class="keyword">while</span>(cur-&gt;next)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span>(cur-&gt;val==cur-&gt;next-&gt;val)</span><br><span class="line">            &#123;</span><br><span class="line">                ListNode * temp=cur-&gt;next; <span class="comment">//釋放cur-&gt;next</span></span><br><span class="line">                cur-&gt;next=cur-&gt;next-&gt;next;</span><br><span class="line">                <span class="built_in">delete</span> (temp);</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span></span><br><span class="line">                cur=cur-&gt;next;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> head;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-<h1 id="53-Maximum-Subarray"><a href="#53-Maximum-Subarray" class="headerlink" title="53.Maximum Subarray"></a><span id="jump53">53.Maximum Subarray</span></h1><h3 id="題目-1"><a href="#題目-1" class="headerlink" title="題目:"></a>題目:</h3><p>今天有一個array，我們要找出在這個array中連續和最大的結果。</p>
-<h3 id="連結-1"><a href="#連結-1" class="headerlink" title="連結:"></a>連結:</h3><p><a><a target="_blank" rel="noopener" href="https://leetcode.com/problems/maximum-subarray/">https://leetcode.com/problems/maximum-subarray/</a> </a></p>
-<h3 id="範例-1"><a href="#範例-1" class="headerlink" title="範例:"></a>範例:</h3><p>Input: nums = [-2,1,-3,4,-1,2,1,-5,4]<br>Output: 6<br>Explanation: [4,-1,2,1] has the largest sum = 6.</p>
-<h3 id="解題思路-1"><a href="#解題思路-1" class="headerlink" title="解題思路:"></a>解題思路:</h3><p>想成是累加問題(greedy)，若加上下一個值等於負的則重新累加，反之就繼續往下加，因為今天如果是負的就可以確定當前的subarray趨勢向下沒有必要繼續，<strong>記得要每次都把當前累加後的最大值記錄下來要不然就沒意義了XDD</strong>。</p>
-<h3 id="source-code-1"><a href="#source-code-1" class="headerlink" title="source code:"></a>source code:</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="type">int</span> <span class="title">maxSubArray</span><span class="params">(vector&lt;<span class="type">int</span>&gt;&amp; nums)</span> </span>&#123;</span><br><span class="line">        <span class="type">int</span> max=nums[<span class="number">0</span>];</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>;i&lt;nums.<span class="built_in">size</span>();i++)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span>(nums[i<span class="number">-1</span>]&gt;=<span class="number">0</span>)</span><br><span class="line">                nums[i]+=nums[i<span class="number">-1</span>];</span><br><span class="line">            <span class="keyword">if</span>(max&lt;nums[i])</span><br><span class="line">                max=nums[i];</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> max;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-<h1 id="35-Search-Insert-Position"><a href="#35-Search-Insert-Position" class="headerlink" title="35.Search Insert Position"></a><span id="jump35">35.Search Insert Position</span></h1><h3 id="題目-2"><a href="#題目-2" class="headerlink" title="題目:"></a>題目:</h3><p>Given a sorted array of distinct integers and a target value, return the index  if the target is found. If not, return the index where it would be if it were inserted in order.<br><strong>You must write an algorithm with O(log n) runtime complexity.</strong></p>
-<h3 id="連結-2"><a href="#連結-2" class="headerlink" title="連結:"></a>連結:</h3><p><a><a target="_blank" rel="noopener" href="https://leetcode.com/problems/search-insert-position/">https://leetcode.com/problems/search-insert-position/</a> </a></p>
-<h3 id="範例-2"><a href="#範例-2" class="headerlink" title="範例:"></a>範例:</h3><p>Input: nums = [1,3,5,6], target = 5<br>Output: 2<br>Input: nums = [1,3,5,6], target = 7<br>Output: 4 </p>
-<h3 id="解題思路-2"><a href="#解題思路-2" class="headerlink" title="解題思路:"></a>解題思路:</h3><p>//待補</p>
-<h3 id="source-code-2"><a href="#source-code-2" class="headerlink" title="source code:"></a>source code:</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="type">int</span> <span class="title">searchInsert</span><span class="params">(vector&lt;<span class="type">int</span>&gt;&amp; nums, <span class="type">int</span> target)</span> </span>&#123;</span><br><span class="line">        <span class="type">int</span> left = <span class="number">0</span>;</span><br><span class="line">        <span class="type">int</span> right = nums.<span class="built_in">size</span>()<span class="number">-1</span>;</span><br><span class="line">        <span class="keyword">while</span> (left&lt;=right) &#123;</span><br><span class="line">          <span class="type">int</span> mid = left+(right-left)/<span class="number">2</span>;</span><br><span class="line">          <span class="keyword">if</span> (nums[mid]&gt;target) &#123;</span><br><span class="line">            right=mid<span class="number">-1</span>;</span><br><span class="line">          &#125; <span class="keyword">else</span> <span class="keyword">if</span> (nums[mid]&lt;target) &#123;</span><br><span class="line">            left=mid+<span class="number">1</span>;</span><br><span class="line">          &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            <span class="keyword">return</span> mid;</span><br><span class="line">          &#125;</span><br><span class="line">        &#125;</span><br><span class="line">            <span class="keyword">return</span> left;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-<h1 id="27-Remove-Element"><a href="#27-Remove-Element" class="headerlink" title="27.Remove Element"></a><span id="jump27">27.Remove Element</span></h1><h3 id="題目-3"><a href="#題目-3" class="headerlink" title="題目:"></a>題目:</h3><p>Explanation: Your function should return k = 2, with the first two elements of nums being 2.<br>It does not matter what you leave beyond the returned k (hence they are underscores).</p>
-<h3 id="連結-3"><a href="#連結-3" class="headerlink" title="連結:"></a>連結:</h3><p><a><a target="_blank" rel="noopener" href="https://leetcode.com/problems/remove-element/">https://leetcode.com/problems/remove-element/</a>  </a></p>
-<h3 id="範例-3"><a href="#範例-3" class="headerlink" title="範例:"></a>範例:</h3><p>Input: nums = [3,2,2,3], val = 3<br>Output: 2, nums = [2,2,_,_] Hint output (origin-val) of size and 把!=val 的值搬到vector前面</p>
-<h3 id="解題思路-3"><a href="#解題思路-3" class="headerlink" title="解題思路:"></a>解題思路:</h3><p>//待補</p>
-<h3 id="source-code-3"><a href="#source-code-3" class="headerlink" title="source code:"></a>source code:</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="type">int</span> <span class="title">removeElement</span><span class="params">(vector&lt;<span class="type">int</span>&gt;&amp; nums, <span class="type">int</span> val)</span> </span>&#123;</span><br><span class="line">        <span class="type">int</span> counter=<span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>;i&lt;nums.<span class="built_in">size</span>();i++)</span><br><span class="line">            <span class="keyword">if</span>(nums[i]!=val)</span><br><span class="line">                nums[counter++]=nums[i];</span><br><span class="line">        <span class="keyword">return</span> counter;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 
                 <hr>
 
@@ -251,10 +316,10 @@
 
                 <ul class="pager">
                     
-                        <li class="previous">
-                            <a href="/2022/06/30/HEXO/" data-toggle="tooltip" data-placement="top" title="HEXO 2022">&larr; Previous Post</a>
-                        </li>
                     
+                        <li class="next">
+                            <a href="/HEXO/" data-toggle="tooltip" data-placement="top" title="HEXO 2022">Next Post &rarr;</a>
+                        </li>
                     
                 </ul>
 
@@ -286,7 +351,9 @@
                     <h5><a href="/tags/">FEATURED TAGS</a></h5>
                     <div class="tags">
                        
-                          <a class="tag" href="/tags/#LeetCode" title="LeetCode">LeetCode</a>
+                          <a class="tag" href="/tags/#籌碼面" title="籌碼面">籌碼面</a>
+                        
+                          <a class="tag" href="/tags/#投資教學" title="投資教學">投資教學</a>
                         
                     </div>
                 </section>
@@ -326,8 +393,8 @@
 <script type="text/javascript">
     /* * * CONFIGURATION VARIABLES * * */
     var disqus_shortname = "samwang1228";
-    var disqus_identifier = "https://samwang1228.github.io/2022/06/28/IMAPOST/";
-    var disqus_url = "https://samwang1228.github.io/2022/06/28/IMAPOST/";
+    var disqus_identifier = "https://samwang1228.github.io/institutionalInvestors/";
+    var disqus_url = "https://samwang1228.github.io/institutionalInvestors/";
 
     (function() {
         var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;

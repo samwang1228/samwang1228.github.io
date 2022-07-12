@@ -1,13 +1,13 @@
-https://samwang1228.github.io/2022/07/05/institutionalInvestors/
-https://samwang1228.github.io/2022/06/28/IMAPOST/
+https://samwang1228.github.io/institutionalInvestors/
+https://samwang1228.github.io/IMAPOST/
 https://samwang1228.github.io/google17371cbf31015480.html
 https://samwang1228.github.io/about/index.html
 https://samwang1228.github.io/404.html
-https://samwang1228.github.io/2022/06/30/HEXO/
+https://samwang1228.github.io/HEXO/
 https://samwang1228.github.io/tags/index.html
 https://samwang1228.github.io/archives/index.html
 https://samwang1228.github.io/
-https://samwang1228.github.io/tags/LeetCode/
 https://samwang1228.github.io/tags/hexo/
+https://samwang1228.github.io/tags/LeetCode/
 https://samwang1228.github.io/tags/%E7%B1%8C%E7%A2%BC%E9%9D%A2/
 https://samwang1228.github.io/tags/%E6%8A%95%E8%B3%87%E6%95%99%E5%AD%B8/
