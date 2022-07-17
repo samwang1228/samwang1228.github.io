@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="google-site-verification" content="xBT4GhYoi5qRD5tr338pgPM5OWHHIDR6mNg1a3euekI" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="keyword"  content="">
+    <link rel="shortcut icon" href="/img/favicon.ico">
+
+    <title>
+        
+          leetcode 75 Level 1 - Sam&#39;s Blog
+        
+    </title>
+
+    <link rel="canonical" href="https://samwang1228.github.io/leetcode75-1/">
+
+    <!-- Bootstrap Core CSS -->
+    
+<link rel="stylesheet" href="/css/bootstrap.min.css">
+
+
+    <!-- Custom CSS -->
+    
+<link rel="stylesheet" href="/css/hux-blog.min.css">
+
+
+    <!-- Pygments Highlight CSS -->
+    
+<link rel="stylesheet" href="/css/highlight.css">
+
+
+    <!-- Custom Fonts -->
+    <!-- <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"> -->
+    <!-- Hux change font-awesome CDN to qiniu -->
+    <link href="https://cdn.staticfile.org/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+
+    <!-- Hux Delete, sad but pending in China
+    <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/
+    css'>
+    -->
+
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- ga & ba script hoook -->
+    <script></script>
+<meta name="generator" content="Hexo 6.2.0"></head>
+
+
+<!-- hack iOS CSS :active style -->
+<body ontouchstart="">
+
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Sam&#39;s Blog</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <!-- Known Issue, found by Hux:
+            <nav>'s height woule be hold on by its content.
+            so, when navbar scale out, the <nav> will cover tags.
+            also mask any touch event of tags, unfortunately.
+        -->
+        <div id="huxblog_navbar">
+            <div class="navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+
+                    
+
+                        
+                    
+
+                        
+                    
+
+                        
+                        <li>
+                            <a href="/archives/">Archives</a>
+                        </li>
+                        
+                    
+
+                        
+                        <li>
+                            <a href="/about/">About</a>
+                        </li>
+                        
+                    
+
+                        
+                        <li>
+                            <a href="/tags/">Tags</a>
+                        </li>
+                        
+                    
+                    
+                </ul>
+            </div>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+<script>
+    // Drop Bootstarp low-performance Navbar
+    // Use customize navbar with high-quality material design animation
+    // in high-perf jank-free CSS3 implementation
+    var $body   = document.body;
+    var $toggle = document.querySelector('.navbar-toggle');
+    var $navbar = document.querySelector('#huxblog_navbar');
+    var $collapse = document.querySelector('.navbar-collapse');
+
+    $toggle.addEventListener('click', handleMagic)
+    function handleMagic(e){
+        if ($navbar.className.indexOf('in') > 0) {
+        // CLOSE
+            $navbar.className = " ";
+            // wait until animation end.
+            setTimeout(function(){
+                // prevent frequently toggle
+                if($navbar.className.indexOf('in') < 0) {
+                    $collapse.style.height = "0px"
+                }
+            },400)
+        }else{
+        // OPEN
+            $collapse.style.height = "auto"
+            $navbar.className += " in";
+        }
+    }
+</script>
+
+
+    <!-- Main Content -->
+    
+<!-- Image to hack wechat -->
+<!-- <img src="https://samwang1228.github.io/img/icon_wechat.png" width="0" height="0"> -->
+<!-- <img src="{{ site.baseurl }}/{% if page.header-img %}{{ page.header-img }}{% else %}{{ site.header-img }}{% endif %}" width="0" height="0"> -->
+
+<!-- Post Header -->
+<style type="text/css">
+    header.intro-header{
+        background-image: url('/img/home-bg.jpg')
+    }
+</style>
+<header class="intro-header" >
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <div class="tags">
+                        
+                          <a class="tag" href="/tags/#LeetCode" title="LeetCode">LeetCode</a>
+                        
+                    </div>
+                    <h1>leetcode 75 Level 1</h1>
+                    <h2 class="subheading">提供source code跟解題思路</h2>
+                    <span class="meta">
+                        Posted by Sam Wang on
+                        2022-07-17
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+    <!-- Post Container -->
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                post-container">
+
+                <blockquote>
+<p>最近改刷常考的面試題leetcode 75，歡迎一起討論留言告訴我你的思路:)</p>
+</blockquote>
+<p><img src="75.jpg" alt="1"></p>
+<ul>
+<li>Day 1 Greedy<ul>
+<li><a href="#jump724">724. Find Pivot Index</a></li>
+</ul>
+</li>
+<li>Day 2 String<ul>
+<li><a href="#jump205">205. Isomorphic Strings</a></li>
+<li><a href="#jump392">392. Is Subsequence</a></li>
+</ul>
+</li>
+<li>Day 3 Linked List<ul>
+<li><a href="#jump21">21. Merge Two Sorted Lists</a></li>
+<li><a href="#jump206">206. Reverse Linked List</a></li>
+</ul>
+</li>
+<li>Day 4 Linked List<ul>
+<li><a href="#jump876">876. Middle of the Linked List</a></li>
+<li><a href="#jump409">142. Linked List Cycle II</a></li>
+</ul>
+</li>
+<li>Day 5 Greedy<ul>
+<li><a href="#jump121">121. Best Time to Buy and Sell Stock</a></li>
+<li><a href="#jump409">409. Longest Palindrome</a></li>
+</ul>
+</li>
+<li>Day 6 Tree<ul>
+<li><a href="#jump589">589. N-ary Tree Preorder Traversal</a></li>
+<li><a href="#jump102">102. Binary Tree Level Order Traversal</a></li>
+</ul>
+</li>
+<li>Day 7 Binary Search<ul>
+<li><a href="#jump278">278. First Bad Version</a></li>
+</ul>
+</li>
+<li>Day 8 Binary Search Tree<ul>
+<li><a href="#jump98">98. Validate Binary Search Tree</a></li>
+</ul>
+</li>
+<li>Day 9 Graph/BFS/DFS<ul>
+<li><a href="#jump733">733. Flood Fill</a></li>
+<li><a href="#jump200">200. Number of Islands</a></li>
+</ul>
+</li>
+</ul>
+<h1 id="589-N-ary-Tree-Preorder-Traversal"><a href="#589-N-ary-Tree-Preorder-Traversal" class="headerlink" title="589. N-ary Tree Preorder Traversal"></a><span id="jump589">589. N-ary Tree Preorder Traversal</span></h1><h3 id="題目"><a href="#題目" class="headerlink" title="題目:"></a>題目:</h3><p>有一個n-ary tree要以preorder的方式尋訪，也就是先從root開始輸出，並要一直往左走，走到底返回上一層在換右邊<br>(點開下方連結看圖比較好懂)</p>
+<h3 id="連結"><a href="#連結" class="headerlink" title="連結:"></a>連結:</h3><p><a><a target="_blank" rel="noopener" href="https://leetcode.com/problems/n-ary-tree-preorder-traversal/">https://leetcode.com/problems/n-ary-tree-preorder-traversal/</a> </a></p>
+<h3 id="範例"><a href="#範例" class="headerlink" title="範例:"></a>範例:</h3><p>Input: root = [1,null,3,2,4,null,5,6]<br>Output: [1,3,5,6,2,4]</p>
+<p>[1,null,2,3,4,5,null,null,6,7,null,8,null,9,10,null,null,11,null,12,null,13,null,null,14]<br>Output: [1,2,3,6,7,11,14,4,8,12,5,9,13,10]</p>
+<h3 id="解題思路"><a href="#解題思路" class="headerlink" title="解題思路:"></a>解題思路:</h3><p>首先要了解架構，每一個node都包含了自己的所有下一層小孩，而每個小孩又包含了自己下一層的所有小孩取值-&gt;val 往小孩走-&gt;child[i] 以第一個input舉例:1-&gt;children[0]=3 1-&gt;children[1]=2，當然可以直接用:的方式遍瀝<br>遞迴:<br>只要用一個for讓root一直往下看小孩即可1-&gt;3-&gt;5-&gt;NULL return上一層3，因上一次遞迴以跑過，因此此時的3的child=[1]-&gt;val為6了以此類推達成。</p>
+<font color=#FF0000>Recursive solution is trivial, could you do it iteratively?</font>
+
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function">vector&lt;<span class="type">int</span>&gt; <span class="title">preorder</span><span class="params">(Node* root)</span> </span>&#123;</span><br><span class="line">        vector&lt;<span class="type">int</span>&gt; res;</span><br><span class="line">        <span class="built_in">traversal</span>(root,res);</span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="type">void</span> <span class="title">traversal</span><span class="params">(Node * root,vector&lt;<span class="type">int</span>&gt;&amp;res)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(!root) <span class="keyword">return</span>;</span><br><span class="line">        res.<span class="built_in">push_back</span>(root-&gt;val);</span><br><span class="line">        cout&lt;&lt;root-&gt;val;</span><br><span class="line">        <span class="keyword">for</span>(Node * child:root-&gt;children)</span><br><span class="line">            <span class="built_in">traversal</span>(child,res);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<h1 id="102-Binary-Tree-Level-Order-Traversal"><a href="#102-Binary-Tree-Level-Order-Traversal" class="headerlink" title="102. Binary Tree Level Order Traversal"></a><span id="jump102">102. Binary Tree Level Order Traversal</span></h1><h3 id="題目-1"><a href="#題目-1" class="headerlink" title="題目:"></a>題目:</h3><p>Given the root of a binary tree, return the level order traversal of its nodes’<br>// values. (i.e., from left to right, level by level).</p>
+<h3 id="連結-1"><a href="#連結-1" class="headerlink" title="連結:"></a>連結:</h3><p><a><a target="_blank" rel="noopener" href="https://leetcode.com/problems/first-bad-version/">https://leetcode.com/problems/first-bad-version/</a> </a></p>
+<h3 id="範例-1"><a href="#範例-1" class="headerlink" title="範例:"></a>範例:</h3><p>Input: root = [3,9,20,null,null,15,7]<br>Output: [[3],[9,20],[15,7]]<br>Input: root = [1]<br>Output: [[1]]</p>
+<h3 id="解題思路-1"><a href="#解題思路-1" class="headerlink" title="解題思路:"></a>解題思路:</h3><p>//待補</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    vector&lt;vector&lt;<span class="type">int</span>&gt;&gt; <span class="built_in">levelOrder</span>(TreeNode* root) &#123;</span><br><span class="line">        queue&lt;TreeNode *&gt; q;</span><br><span class="line">        vector&lt;vector&lt;<span class="type">int</span>&gt;&gt; res;</span><br><span class="line">        <span class="keyword">if</span>(!root)</span><br><span class="line">            <span class="keyword">return</span> res;</span><br><span class="line">        q.<span class="built_in">push</span>(root);</span><br><span class="line">        <span class="keyword">while</span>(!q.<span class="built_in">empty</span>())</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="type">int</span> size=q.<span class="built_in">size</span>();</span><br><span class="line">            cout&lt;&lt;size&lt;&lt;endl;</span><br><span class="line">            vector&lt;<span class="type">int</span>&gt; level;</span><br><span class="line">            <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>;i&lt;size;i++)</span><br><span class="line">            &#123;</span><br><span class="line">                TreeNode* cur=q.<span class="built_in">front</span>();</span><br><span class="line">                q.<span class="built_in">pop</span>();</span><br><span class="line">                level.<span class="built_in">push_back</span>(cur-&gt;val);</span><br><span class="line">                <span class="keyword">if</span>(cur-&gt;left)</span><br><span class="line">                    q.<span class="built_in">push</span>(cur-&gt;left);</span><br><span class="line">                <span class="keyword">if</span>(cur-&gt;right)</span><br><span class="line">                    q.<span class="built_in">push</span>(cur-&gt;right);</span><br><span class="line">            &#125;</span><br><span class="line">            res.<span class="built_in">push_back</span>(level);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<h1 id="278-First-Bad-Version"><a href="#278-First-Bad-Version" class="headerlink" title="278. First Bad Version"></a><span id="jump278">278. First Bad Version</span></h1><h3 id="題目-2"><a href="#題目-2" class="headerlink" title="題目:"></a>題目:</h3><p>給定一個size且提供一個已寫好的函示isBadVersion(index)，此函數可以判斷這個位置是好的還是壞的，若是壞的isBadVersion()會return true反之return false，今天我們要找出第一個壞的位置，因為一旦第i個壞掉，i+1~size的地方都會是壞的(return true)。</p>
+<h3 id="連結-2"><a href="#連結-2" class="headerlink" title="連結:"></a>連結:</h3><p><a><a target="_blank" rel="noopener" href="https://leetcode.com/problems/first-bad-version/">https://leetcode.com/problems/first-bad-version/</a> </a></p>
+<h3 id="範例-2"><a href="#範例-2" class="headerlink" title="範例:"></a>範例:</h3><p>Input: n = 5, bad = 4<br>Output: 4<br>Explanation:<br>call isBadVersion(3) -&gt; false<br>call isBadVersion(5) -&gt; true<br>call isBadVersion(4) -&gt; true<br>Then 4 is the first bad version.</p>
+<p>Input: n = 1, bad = 1<br>Output: 1</p>
+<h3 id="解題思路-2"><a href="#解題思路-2" class="headerlink" title="解題思路:"></a>解題思路:</h3><p>使用binary search，只是這次要找的解為上一個false下一個為ture的位置，而當遇到true代表右邊要往中間縮(為了找到第一個true)反之遇到false左邊要往中間靠(為了找到最後一個false)。<br><strong><em> 請使用mid=left+(right-left)/2; offset的概念，而非mid=(right+left)/2因為可能會超過int的範圍，且使用long long效率會變差 </em></strong></p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="type">int</span> <span class="title">firstBadVersion</span><span class="params">(<span class="type">int</span> n)</span> </span>&#123;</span><br><span class="line">        <span class="type">int</span> right=n,left=<span class="number">0</span>,mid;</span><br><span class="line">        <span class="keyword">while</span>(left&lt;=right)</span><br><span class="line">        &#123;</span><br><span class="line">        mid=left+(right-left)/<span class="number">2</span>;</span><br><span class="line">        <span class="keyword">if</span>(<span class="built_in">isBadVersion</span>(mid+<span class="number">1</span>)&amp;&amp;!<span class="built_in">isBadVersion</span>(mid))</span><br><span class="line">            <span class="keyword">return</span> mid+<span class="number">1</span>;</span><br><span class="line">        <span class="keyword">if</span>(<span class="built_in">isBadVersion</span>(mid))</span><br><span class="line">            right=mid<span class="number">-1</span>;</span><br><span class="line">        <span class="keyword">else</span> </span><br><span class="line">            left=mid+<span class="number">1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> left;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<h1 id="98-Validate-Binary-Search-Tree"><a href="#98-Validate-Binary-Search-Tree" class="headerlink" title="98. Validate Binary Search Tree"></a><span id="jump98">98. Validate Binary Search Tree</span></h1><h3 id="題目-3"><a href="#題目-3" class="headerlink" title="題目:"></a>題目:</h3><p>左子樹要小於爸爸，右子樹要大於爸爸，且左子樹和柚子數的小孩也就是爸爸的孫子一樣要滿足此情況。<br>(點開連結看圖比較好懂)</p>
+<h3 id="連結-3"><a href="#連結-3" class="headerlink" title="連結:"></a>連結:</h3><p><a><a target="_blank" rel="noopener" href="https://leetcode.com/problems/validate-binary-search-tree/">https://leetcode.com/problems/validate-binary-search-tree/</a> </a></p>
+<h3 id="範例-3"><a href="#範例-3" class="headerlink" title="範例:"></a>範例:</h3><p>Input: root = [2,1,3]<br>Output: true</p>
+<p>Input: root = [5,1,4,null,null,3,6]<br>Output: false<br>Explanation: The root node’s value is 5 but its right child’s value is 4.</p>
+<h3 id="解題思路-3"><a href="#解題思路-3" class="headerlink" title="解題思路:"></a>解題思路:</h3><p>解法1:<br>分成兩個recursive，一個一直往左判斷，一個一直往右判斷，且每次判斷兩個條件都要成立(左邊小右邊大)，所以走左邊的最大值放預設，走右邊的最小值放預設這樣用不到的另一個一定能滿足。<br><strong>註:LLONG_MAX為long type下的最大值，LLONG_MIN為long type下的最小值</strong></p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="type">bool</span> <span class="title">isValidBST</span><span class="params">(TreeNode* root)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">isCheck</span>(root,LLONG_MAX,LLONG_MIN);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="type">bool</span> <span class="title">isCheck</span><span class="params">(TreeNode *root,<span class="type">long</span> max,<span class="type">long</span> min)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(!root)</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">        <span class="keyword">if</span>(root-&gt;val&gt;=max ||root-&gt;val&lt;=min)</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">isCheck</span>(root-&gt;left,root-&gt;val,min) &amp;&amp;<span class="built_in">isCheck</span>(root-&gt;right,max,root-&gt;val);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<p>解法2:<br>只用中序尋訪(inorder)，BST在Inorder的情況下是sorting的</p>
+<h1 id="733-Flood-Fill"><a href="#733-Flood-Fill" class="headerlink" title="733. Flood Fill"></a><span id="jump733">733. Flood Fill</span></h1><h3 id="題目-4"><a href="#題目-4" class="headerlink" title="題目:"></a>題目:</h3><p>給定一個二維陣列把他想成照片，裡面的值可以當作是對應的pixel值，今天給定一個要換的新顏色以及一個固定點<br>要從此固定點上下左右遍瀝搜尋，若此搜尋的點之顏色跟固定點之顏色不同則停止搜尋，反之將此顏色換成新顏色。</p>
+<h3 id="連結-4"><a href="#連結-4" class="headerlink" title="連結:"></a>連結:</h3><p><a><a target="_blank" rel="noopener" href="https://leetcode.com/problems/flood-fill/">https://leetcode.com/problems/flood-fill/</a> </a></p>
+<h3 id="範例-4"><a href="#範例-4" class="headerlink" title="範例:"></a>範例:</h3><p>Input: image = [[1,1,1],[1,1,0],[1,0,1]], sr = 1, sc = 1, color = 2<br>Output: [[2,2,2],[2,2,0],[2,0,1]]<br>Explanation: From the center of the image with position (sr, sc) = (1, 1) (i.e., the red pixel), all pixels connected by a path of the same color as the starting pixel (i.e., the blue pixels) are colored with the new color.<br>Note the bottom corner is not colored 2, because it is not 4-directionally connected to the starting pixel.</p>
+<p>Input: image = [[0,0,0],[0,0,0]], sr = 0, sc = 0, color = 0<br>Output: [[0,0,0],[0,0,0]]<br>Explanation: The starting pixel is already colored 0, so no changes are made to the image.</p>
+<h3 id="解題思路-4"><a href="#解題思路-4" class="headerlink" title="解題思路:"></a>解題思路:</h3><p>解法1(DFS):<br>用四個遞迴依序尋訪四個位置，若row、col超出範圍則結束遞迴，又或者當前color不等於指定點也是。<br><strong><em> 若搞不清楚col、rol 用cout&lt;&lt;”r “&lt;&lt;rowsize&lt;&lt;”c “&lt;&lt;colsize;判斷 </em></strong></p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    vector&lt;vector&lt;<span class="type">int</span>&gt;&gt; <span class="built_in">floodFill</span>(vector&lt;vector&lt;<span class="type">int</span>&gt;&gt;&amp; image, <span class="type">int</span> sr, <span class="type">int</span> sc, <span class="type">int</span> color) &#123;</span><br><span class="line">        <span class="keyword">if</span>(image[sr][sc]==color)</span><br><span class="line">            <span class="keyword">return</span> image;</span><br><span class="line">        <span class="type">int</span> rowsize=image.<span class="built_in">size</span>();</span><br><span class="line">        <span class="type">int</span> colsize=image[<span class="number">0</span>].<span class="built_in">size</span>();</span><br><span class="line">        <span class="built_in">dfs</span>(image,sr,sc,image[sr][sc],color,colsize,rowsize);</span><br><span class="line">        <span class="keyword">return</span> image;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="type">void</span> <span class="title">dfs</span><span class="params">(vector&lt;vector&lt;<span class="type">int</span>&gt;&gt;&amp;res,<span class="type">int</span> row,<span class="type">int</span> col,<span class="type">int</span> oldColor,<span class="type">int</span> newColor,<span class="type">int</span> cs,<span class="type">int</span> rs)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(row&lt;<span class="number">0</span>||col&lt;<span class="number">0</span>||row&gt;=rs||col&gt;=cs)</span><br><span class="line">            <span class="keyword">return</span>;</span><br><span class="line">        <span class="keyword">if</span>(res[row][col]!=oldColor)</span><br><span class="line">            <span class="keyword">return</span>;</span><br><span class="line">        res[row][col]=newColor;</span><br><span class="line">        <span class="built_in">dfs</span>(res,row<span class="number">-1</span>,col,oldColor,newColor,cs,rs);</span><br><span class="line">        <span class="built_in">dfs</span>(res,row,col<span class="number">-1</span>,oldColor,newColor,cs,rs);</span><br><span class="line">        <span class="built_in">dfs</span>(res,row+<span class="number">1</span>,col,oldColor,newColor,cs,rs);</span><br><span class="line">        <span class="built_in">dfs</span>(res,row,col+<span class="number">1</span>,oldColor,newColor,cs,rs);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<p>解法2(BFS):<br>用四個queue來將上下左右位置存入，切換條件跟遞迴一樣<br><strong><em> 若第一次用pair記住push時要{var1,var2} </em></strong></p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    vector&lt;vector&lt;<span class="type">int</span>&gt;&gt; <span class="built_in">floodFill</span>(vector&lt;vector&lt;<span class="type">int</span>&gt;&gt;&amp; image, <span class="type">int</span> sr, <span class="type">int</span> sc, <span class="type">int</span> color) &#123;</span><br><span class="line">        <span class="keyword">if</span>(image[sr][sc]==color)</span><br><span class="line">            <span class="keyword">return</span> image;</span><br><span class="line">        <span class="type">int</span> rowsize=image.<span class="built_in">size</span>();</span><br><span class="line">        <span class="type">int</span> colsize=image[<span class="number">0</span>].<span class="built_in">size</span>();</span><br><span class="line">        <span class="built_in">bfs</span>(image,sr,sc,image[sr][sc],color,colsize,rowsize);</span><br><span class="line">        <span class="keyword">return</span> image;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="type">void</span> <span class="title">bfs</span><span class="params">(vector&lt;vector&lt;<span class="type">int</span>&gt;&gt;&amp;res,<span class="type">int</span> row,<span class="type">int</span> col,<span class="type">int</span> oldColor,<span class="type">int</span> newColor,<span class="type">int</span> cs,<span class="type">int</span> rs)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        queue&lt;pair&lt;<span class="type">int</span>,<span class="type">int</span>&gt;&gt; q;</span><br><span class="line">        q.<span class="built_in">push</span>(&#123;row,col&#125;);</span><br><span class="line">        <span class="keyword">while</span>(!q.<span class="built_in">empty</span>())</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="type">const</span> <span class="keyword">auto</span> [R,C]=q.<span class="built_in">front</span>();</span><br><span class="line">            q.<span class="built_in">pop</span>();</span><br><span class="line">            <span class="keyword">if</span>(R&lt;<span class="number">0</span>||C&lt;<span class="number">0</span>||R&gt;=rs||C&gt;=cs)</span><br><span class="line">                <span class="keyword">continue</span>;</span><br><span class="line">            <span class="keyword">if</span>(res[R][C]!=oldColor)</span><br><span class="line">                <span class="keyword">continue</span>;</span><br><span class="line">            res[R][C]=newColor;</span><br><span class="line">            q.<span class="built_in">push</span>(&#123;R<span class="number">-1</span>,C&#125;);</span><br><span class="line">            q.<span class="built_in">push</span>(&#123;R,C<span class="number">-1</span>&#125;);</span><br><span class="line">            q.<span class="built_in">push</span>(&#123;R+<span class="number">1</span>,C&#125;);</span><br><span class="line">            q.<span class="built_in">push</span>(&#123;R,C+<span class="number">1</span>&#125;);</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<h1 id="200-Number-of-Islands"><a href="#200-Number-of-Islands" class="headerlink" title="200. Number of Islands"></a><span id="jump200">200. Number of Islands</span></h1><h3 id="題目-5"><a href="#題目-5" class="headerlink" title="題目:"></a>題目:</h3><p>給定一個二維陣列，這個陣列由0、1組成1為島嶼、0為水，若島嶼四周皆為水代表一個島嶼<br>今天我們要回傳總共有幾個島。</p>
+<h3 id="連結-5"><a href="#連結-5" class="headerlink" title="連結:"></a>連結:</h3><p><a><a target="_blank" rel="noopener" href="https://leetcode.com/problems/number-of-islands/">https://leetcode.com/problems/number-of-islands/</a> </a></p>
+<h3 id="範例-5"><a href="#範例-5" class="headerlink" title="範例:"></a>範例:</h3><p>Input: grid = [<br>  [“1”,”1”,”1”,”1”,”0”],<br>  [“1”,”1”,”0”,”1”,”0”],<br>  [“1”,”1”,”0”,”0”,”0”],<br>  [“0”,”0”,”0”,”0”,”0”]<br>]<br>Output: 1</p>
+<p>Input: grid = [<br>  [“1”,”1”,”0”,”0”,”0”],<br>  [“1”,”1”,”0”,”0”,”0”],<br>  [“0”,”0”,”1”,”0”,”0”],<br>  [“0”,”0”,”0”,”1”,”1”]<br>]<br>Output: 3.</p>
+<h3 id="解題思路-5"><a href="#解題思路-5" class="headerlink" title="解題思路:"></a>解題思路:</h3><p>解法1(DFS):<br>跟733一樣用四個遞迴依序尋訪四個位置，並且將尋訪過的1改為0依序擴散，這樣就能知道區分島的範圍<br>因為最後每個獨立島嶼會被縮小成1個1而已，因此將array元素-‘0’就能知道有幾座島。<br><strong><em> 若搞不清楚col、rol 用cout&lt;&lt;”r “&lt;&lt;rowsize&lt;&lt;”c “&lt;&lt;colsize;判斷 </em></strong></p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="type">int</span> <span class="title">numIslands</span><span class="params">(vector&lt;vector&lt;<span class="type">char</span>&gt;&gt;&amp; grid)</span> </span>&#123;</span><br><span class="line">    rs=grid.<span class="built_in">size</span>();</span><br><span class="line">    cs=grid[<span class="number">0</span>].<span class="built_in">size</span>();</span><br><span class="line">    <span class="type">int</span> counter=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>;i&lt;rs;i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> j=<span class="number">0</span>;j&lt;cs;j++)</span><br><span class="line">        &#123;</span><br><span class="line">            counter+=grid[i][j]-<span class="string">&#x27;0&#x27;</span>;</span><br><span class="line">            <span class="built_in">dfs</span>(grid,i,j);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">        <span class="keyword">return</span> counter;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="type">void</span> <span class="title">dfs</span><span class="params">(vector&lt;vector&lt;<span class="type">char</span>&gt;&gt;&amp;res,<span class="type">int</span> row,<span class="type">int</span> col)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(row&lt;<span class="number">0</span>||col&lt;<span class="number">0</span>||row&gt;=rs||col&gt;=cs||res[row][col]==<span class="string">&#x27;0&#x27;</span>)</span><br><span class="line">            <span class="keyword">return</span>;</span><br><span class="line">        res[row][col]=<span class="string">&#x27;0&#x27;</span>;</span><br><span class="line">        <span class="built_in">dfs</span>(res,row<span class="number">-1</span>,col);</span><br><span class="line">        <span class="built_in">dfs</span>(res,row,col<span class="number">-1</span>);</span><br><span class="line">        <span class="built_in">dfs</span>(res,row+<span class="number">1</span>,col);</span><br><span class="line">        <span class="built_in">dfs</span>(res,row,col+<span class="number">1</span>);</span><br><span class="line">    &#125;</span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line">    <span class="type">int</span> rs=<span class="number">0</span>;</span><br><span class="line">    <span class="type">int</span> cs=<span class="number">0</span>;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<p>解法2(BFS):<br>用四個queue來將上下左右位置存入，切換條件跟遞迴一樣<br><strong><em> 若第一次用pair記住push時要{var1,var2} </em></strong></p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="type">int</span> <span class="title">numIslands</span><span class="params">(vector&lt;vector&lt;<span class="type">char</span>&gt;&gt;&amp; grid)</span> </span>&#123;</span><br><span class="line">    rs=grid.<span class="built_in">size</span>();</span><br><span class="line">    cs=grid[<span class="number">0</span>].<span class="built_in">size</span>();</span><br><span class="line">    <span class="type">int</span> counter=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>;i&lt;rs;i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> j=<span class="number">0</span>;j&lt;cs;j++)</span><br><span class="line">        &#123;</span><br><span class="line">            counter+=grid[i][j]-<span class="string">&#x27;0&#x27;</span>;</span><br><span class="line">            <span class="built_in">bfs</span>(grid,i,j);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">        <span class="keyword">return</span> counter;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="type">void</span> <span class="title">bfs</span><span class="params">(vector&lt;vector&lt;<span class="type">char</span>&gt;&gt;&amp;res,<span class="type">int</span> row,<span class="type">int</span> col)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        queue&lt;pair&lt;<span class="type">int</span>,<span class="type">int</span>&gt;&gt; q;</span><br><span class="line">        q.<span class="built_in">push</span>(&#123;row,col&#125;);</span><br><span class="line">        <span class="keyword">while</span>(!q.<span class="built_in">empty</span>())</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="type">const</span> <span class="keyword">auto</span> [R,C]=q.<span class="built_in">front</span>();</span><br><span class="line">            q.<span class="built_in">pop</span>();</span><br><span class="line">            <span class="keyword">if</span>(R&lt;<span class="number">0</span>||C&lt;<span class="number">0</span>||R&gt;=rs||C&gt;=cs||res[R][C]==<span class="string">&#x27;0&#x27;</span>)</span><br><span class="line">                <span class="keyword">continue</span>;</span><br><span class="line">            res[R][C]=<span class="string">&#x27;0&#x27;</span>;</span><br><span class="line">            q.<span class="built_in">push</span>(&#123;R<span class="number">-1</span>,C&#125;);</span><br><span class="line">            q.<span class="built_in">push</span>(&#123;R,C<span class="number">-1</span>&#125;);</span><br><span class="line">            q.<span class="built_in">push</span>(&#123;R+<span class="number">1</span>,C&#125;);</span><br><span class="line">            q.<span class="built_in">push</span>(&#123;R,C+<span class="number">1</span>&#125;);</span><br><span class="line">            </span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line">    <span class="type">int</span> rs=<span class="number">0</span>;</span><br><span class="line">    <span class="type">int</span> cs=<span class="number">0</span>;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+                <hr>
+
+                
+
+                <ul class="pager">
+                    
+                    
+                        <li class="next">
+                            <a href="/institutionalInvestors/" data-toggle="tooltip" data-placement="top" title="三大法人與籌碼">Next Post &rarr;</a>
+                        </li>
+                    
+                </ul>
+
+                
+
+                
+                <!-- disqus 评论框 start -->
+                <div class="comment">
+                    <div id="disqus_thread" class="disqus-thread"></div>
+                </div>
+                <!-- disqus 评论框 end -->
+                
+
+            </div>
+    <!-- Side Catalog Container -->
+        
+
+    <!-- Sidebar Container -->
+
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+                <!-- Featured Tags -->
+                
+                <section>
+                    <!-- no hr -->
+                    <h5><a href="/tags/">FEATURED TAGS</a></h5>
+                    <div class="tags">
+                       
+                          <a class="tag" href="/tags/#LeetCode" title="LeetCode">LeetCode</a>
+                        
+                    </div>
+                </section>
+                
+
+                <!-- Friends Blog -->
+                
+                <hr>
+                <h5>FRIENDS</h5>
+                <ul class="list-inline">
+
+                    
+                        <li><a href="https://www.facebook.com/profile.php?id=100007093326898" target="_blank">sam&#39;s fb</a></li>
+                    
+                        <li><a href="#" target="_blank">test</a></li>
+                    
+                        <li><a href="#" target="_blank">Foo</a></li>
+                    
+                        <li><a href="#" target="_blank">Bar</a></li>
+                    
+                        <li><a href="#" target="_blank">Example Friends</a></li>
+                    
+                        <li><a href="#" target="_blank">It helps SEO</a></li>
+                    
+                </ul>
+                
+            </div>
+
+        </div>
+    </div>
+</article>
+
+
+
+
+<!-- disqus 公共JS代码 start (一个网页只需插入一次) -->
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES * * */
+    var disqus_shortname = "samwang1228";
+    var disqus_identifier = "https://samwang1228.github.io/leetcode75-1/";
+    var disqus_url = "https://samwang1228.github.io/leetcode75-1/";
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<!-- disqus 公共JS代码 end -->
+
+
+
+
+<!-- async load function -->
+<script>
+    function async(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+<!-- anchor-js, Doc:http://bryanbraun.github.io/anchorjs/ -->
+<script>
+    async("https://cdn.bootcss.com/anchor-js/1.1.1/anchor.min.js",function(){
+        anchors.options = {
+          visible: 'always',
+          placement: 'right',
+          icon: '#'
+        };
+        anchors.add().remove('.intro-header h1').remove('.subheading').remove('.sidebar-container h5');
+    })
+</script>
+<style>
+    /* place left on bigger screen */
+    @media all and (min-width: 800px) {
+        .anchorjs-link{
+            position: absolute;
+            left: -0.75em;
+            font-size: 1.1em;
+            margin-top : -0.1em;
+        }
+    }
+</style>
+
+
+
+    <!-- Footer -->
+    <!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                
+                
+                
+
+                
+                    <li>
+                        <a target="_blank" href="http://instagram.com/sam_art1228">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-instagram fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                
+
+                
+                    <li>
+                        <a target="_blank" href="https://www.facebook.com/profile.php?id=100007093326898">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                
+
+                
+                    <li>
+                        <a target="_blank"  href="https://github.com/samwang1228">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                
+
+                
+
+                </ul>
+                <p class="copyright text-muted">
+                    Copyright &copy; Sam&#39;s Blog 2022 
+                    <br>
+                    Theme by <a target="_blank" rel="noopener" href="http://huangxuan.me">Hux</a> 
+                    <span style="display: inline-block; margin: 0 5px;">
+                        <i class="fa fa-heart"></i>
+                    </span> 
+                    Ported by <a target="_blank" rel="noopener" href="http://blog.kaijun.rocks">Kaijun</a> | 
+                    <iframe
+                        style="margin-left: 2px; margin-bottom:-5px;"
+                        frameborder="0" scrolling="0" width="91px" height="20px"
+                        src="https://ghbtns.com/github-btn.html?user=kaijun&repo=hexo-theme-huxblog&type=star&count=true" >
+                    </iframe>
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- jQuery -->
+
+<script src="/js/jquery.min.js"></script>
+
+
+<!-- Bootstrap Core JavaScript -->
+
+<script src="/js/bootstrap.min.js"></script>
+
+
+<!-- Custom Theme JavaScript -->
+
+<script src="/js/hux-blog.min.js"></script>
+
+
+
+<!-- async load function -->
+<script>
+    function async(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+
+<!-- 
+     Because of the native support for backtick-style fenced code blocks 
+     right within the Markdown is landed in Github Pages, 
+     From V1.6, There is no need for Highlight.js, 
+     so Huxblog drops it officially.
+
+     - https://github.com/blog/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0  
+     - https://help.github.com/articles/creating-and-highlighting-code-blocks/    
+-->
+<!--
+    <script>
+        async("http://cdn.bootcss.com/highlight.js/8.6/highlight.min.js", function(){
+            hljs.initHighlightingOnLoad();
+        })
+    </script>
+    <link href="http://cdn.bootcss.com/highlight.js/8.6/styles/github.min.css" rel="stylesheet">
+-->
+
+
+<!-- jquery.tagcloud.js -->
+<script>
+    // only load tagcloud.js in tag.html
+    if($('#tag_cloud').length !== 0){
+        async("https://samwang1228.github.io/js/jquery.tagcloud.js",function(){
+            $.fn.tagcloud.defaults = {
+                //size: {start: 1, end: 1, unit: 'em'},
+                color: {start: '#bbbbee', end: '#0085a1'},
+            };
+            $('#tag_cloud a').tagcloud();
+        })
+    }
+</script>
+
+<!--fastClick.js -->
+<script>
+    async("https://cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function(){
+        var $nav = document.querySelector("nav");
+        if($nav) FastClick.attach($nav);
+    })
+</script>
+
+
+<!-- Google Analytics -->
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-31R3W81QC4"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-31R3W81QC4');
+</script>
+
+<script>
+    // dynamic User by Hux
+    var _gaId = 'G-31R3W81QC4';
+    var _gaDomain = 'undefined';
+
+    // Originial
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', _gaId, _gaDomain);
+    ga('send', 'pageview');
+</script>
+
+
+
+
+<!-- Baidu Tongji -->
+
+
+<!-- Side Catalog -->
+
+
+
+
+
+<!-- Image to hack wechat -->
+<img src="https://samwang1228.github.io/img/icon_wechat.png" width="0" height="0" />
+<!-- Migrate from head to bottom, no longer block render and still work -->
+
+</body>
+
+</html>
