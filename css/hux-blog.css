@@ -9,6 +9,10 @@
     padding-right: 5%;
   }
 }
+.blue-text
+{
+    color: blue;
+}
 .sidebar-container {
   color: #bfbfbf;
   font-size: 14px;
