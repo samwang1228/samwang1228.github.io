@@ -169,7 +169,9 @@ a:hover {
 .lang-btn {
   border: none;
   background: transparent;
-  padding: 5px 12px;
+  padding: 6px 20px;
+  min-width: 52px;
+  text-align: center;
   font-size: 0.8125rem;
   font-weight: 600;
   color: var(--text-muted);
@@ -1114,6 +1116,28 @@ a:hover {
 }
 
 @media (max-width: 768px) {
+  .nav-wrapper {
+    padding: 0 16px;
+  }
+
+  .nav-logo-text {
+    display: none !important;
+  }
+
+  .nav-actions {
+    gap: 10px;
+  }
+
+  .lang-btn {
+    padding: 6px 16px;
+    min-width: 48px;
+  }
+
+  .btn-cv {
+    padding: 6px 14px;
+    font-size: 0.8125rem;
+  }
+
   .nav-links {
     display: none;
   }
