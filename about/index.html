@@ -1,0 +1,893 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shao-Cheng Wang (王紹丞) | Embedded Systems Engineer</title>
+  <meta name="description"
+    content="Portfolio of Shao-Cheng Wang, an Embedded Systems Engineer passionate about driver development and intelligent assistive technologies.">
+  <link rel="shortcut icon" href="/img/favicon.ico">
+
+  <!-- Google Fonts: Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+TC:wght@400;500;700&display=swap"
+    rel="stylesheet">
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="lang-en">
+
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <div class="nav-wrapper">
+      <div class="nav-brand">
+        <a href="/" class="back-to-blog" title="Return to Blog">
+          <i class="fa-solid fa-arrow-left"></i>
+          <span data-lang="en">Blog</span>
+          <span data-lang="zh">文章列表</span>
+        </a>
+        <span class="nav-logo-text" data-lang="en">Shao-Cheng Wang</span>
+        <span class="nav-logo-text" data-lang="zh">王紹丞</span>
+      </div>
+
+      <ul class="nav-links">
+        <li><a href="#story" data-lang="en">My Story</a><a href="#story" data-lang="zh">個人故事</a></li>
+        <li><a href="#experience" data-lang="en">Experience</a><a href="#experience" data-lang="zh">經歷</a></li>
+        <li><a href="#projects" data-lang="en">Projects</a><a href="#projects" data-lang="zh">專案</a></li>
+        <li><a href="#awards" data-lang="en">Awards</a><a href="#awards" data-lang="zh">榮譽</a></li>
+        <li><a href="#contact" data-lang="en">Contact</a><a href="#contact" data-lang="zh">聯絡</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <!-- Language Switch -->
+        <div class="lang-switch" role="group" aria-label="Language Selector">
+          <button class="lang-btn lang-btn-en active" type="button">EN</button>
+          <button class="lang-btn lang-btn-zh" type="button">中文</button>
+        </div>
+
+        <!-- Download CV Button -->
+        <a href="CV_ShaoCheng_Wang.pdf" target="_blank" class="btn-cv" download>
+          <i class="fa-solid fa-file-arrow-down"></i>
+          <span data-lang="en">CV</span>
+          <span data-lang="zh">履歷</span>
+        </a>
+
+        <!-- Mobile Menu Toggle -->
+        <button class="mobile-toggle" aria-label="Toggle navigation menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="hero">
+    <div class="container">
+      <div class="hero-grid">
+        <div class="hero-content">
+          <div class="hero-badge">
+            <i class="fa-solid fa-award"></i>
+            <span data-lang="en">Double Presidential Education Award Recipient (2016 & 2023)</span>
+            <span data-lang="zh">雙屆總統教育獎得主（2016 藝術 / 2023 科技）</span>
+          </div>
+
+          <h1 class="hero-title">
+            <span data-lang="en">Shao-Cheng Wang</span>
+            <span data-lang="zh">王紹丞 <span class="en-sub">Shao-Cheng Wang</span></span>
+          </h1>
+
+          <h2 class="hero-position">
+            <span data-lang="en">Embedded Systems Engineer &amp; Driver Developer</span>
+            <span data-lang="zh">嵌入式系統工程師 | 軟韌體驅動開發</span>
+          </h2>
+
+          <p class="hero-description">
+            <span data-lang="en">
+              Experienced in device driver development and low-level silicon validation. Passionate about solving
+              complex system-level challenges and bridging high-performance embedded systems with transformative
+              intelligent assistive technologies.
+            </span>
+            <span data-lang="zh">
+              具備晶片驗證與底層驅動程式開發實戰經驗。熱衷於解決複雜的系統架構挑戰，並致力於將高效能嵌入式系統與深度學習技術結合，打造改變生命的智能科技輔具。
+            </span>
+          </p>
+
+          <div class="hero-highlights">
+            <div class="highlight-tag">
+              <i class="fa-brands fa-google text-primary"></i>
+              <span data-lang="en">Associate Software Engineer</span>
+              <span data-lang="zh">Google 工程師經歷</span>
+            </div>
+            <div class="highlight-tag">
+              <i class="fa-solid fa-microchip"></i>
+              <span data-lang="en">LK &amp; Linux Drivers</span>
+              <span data-lang="zh">LK 核心驅動開發</span>
+            </div>
+            <div class="highlight-tag">
+              <i class="fa-solid fa-graduation-cap"></i>
+              <span data-lang="en">NTUST CS Master's</span>
+              <span data-lang="zh">臺科大資工碩士</span>
+            </div>
+            <div class="highlight-tag">
+              <i class="fa-solid fa-heart-pulse"></i>
+              <span data-lang="en">Assistive Tech Mission</span>
+              <span data-lang="zh">智慧輔具研發願景</span>
+            </div>
+          </div>
+
+          <div class="hero-buttons">
+            <a href="#projects" class="btn btn-primary">
+              <span data-lang="en">View Projects</span>
+              <span data-lang="zh">查看專案</span>
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
+            <a href="#story" class="btn btn-outline">
+              <span data-lang="en">My Story</span>
+              <span data-lang="zh">個人故事</span>
+            </a>
+            <a href="#contact" class="btn btn-outline">
+              <span data-lang="en">Contact Me</span>
+              <span data-lang="zh">聯絡我</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Profile Photo -->
+        <div class="hero-media">
+          <div class="profile-card">
+            <img src="profile.jpg" alt="Shao-Cheng Wang (王紹丞)" class="profile-img">
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- My Story & Mission Section -->
+  <section id="story" class="section section-alt">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-eyebrow" data-lang="en">Background &amp; Vision</span>
+        <span class="section-eyebrow" data-lang="zh">心路歷程與使命</span>
+        <h2 class="section-title">
+          <span data-lang="en">From Canvas to Code</span>
+          <span data-lang="zh">從畫筆到程式碼</span>
+        </h2>
+        <p class="section-subtitle">
+          <span data-lang="en">Navigating life with a respirator and turning resilience into technological
+            innovation.</span>
+          <span data-lang="zh">帶著呼吸器勇闖人生，將不屈的生命韌性轉化為改變世界的科技力量。</span>
+        </p>
+      </div>
+
+      <div class="story-grid">
+        <div class="story-card">
+          <h3>
+            <i class="fa-solid fa-feather-pointed" style="color: var(--primary);"></i>
+            <span data-lang="en">My Journey</span>
+            <span data-lang="zh">生命旅程</span>
+          </h3>
+          <p>
+            <span data-lang="en">
+              At age 12, an acute viral infection severely paralyzed my motor nerves, making me reliant on a medical
+              respirator. Instead of giving in, I learned to hold a paintbrush and expressed my optimism on canvas,
+              which was recognized with the <strong>2016 Presidential Education Award</strong>.
+            </span>
+            <span data-lang="zh">
+              12 歲那年，一場罕見病毒感染重創了我的運動神經，使我必須終身依賴呼吸器。面對命運的考驗，我未曾言棄，學會用雙手握緊畫筆，在畫布上彩繪出熱愛生命的色彩，並於 <strong>2016
+                年榮獲總統教育獎（藝術領域）</strong>。
+            </span>
+          </p>
+          <p>
+            <span data-lang="en">
+              Later, I channeled that same relentless determination into computer science. Delving into embedded
+              systems, operating system kernels, and AI, I graduated top of my class at Chang Gung University and
+              pursued my master's degree at NTUST. In 2023, I was deeply honored to receive the <strong>Presidential
+                Education Award for the second time</strong>, this time in science and technology.
+            </span>
+            <span data-lang="zh">
+              求學路上，我將這份毅力注入由 0 與 1 組成的資訊世界。深入鑽研嵌入式作業系統核心、硬體驅動與人工智慧，以系排第二的優異成績自長庚大學資工系畢業，並進入臺科大資工所深造。2023
+              年，我深感榮幸能<strong>第二度榮獲總統教育獎（科技領域）</strong>。
+            </span>
+          </p>
+
+          <div class="mission-box">
+            <p>
+              <span data-lang="en">
+                "My mission is to unite low-level firmware engineering with machine learning to build intelligent
+                assistive devices that decode neurological and physiological signals—empowering individuals with
+                neuromuscular conditions to regain independence and live better lives."
+              </span>
+              <span data-lang="zh">
+                「我的使命是融合軟韌體底層工程與機器學習，研發能判定人體腦神經與肌肉訊號的智能輔具，讓受神經受損與肌無力所苦的病友重獲生活自主與希望。」
+              </span>
+            </p>
+          </div>
+        </div>
+
+        <!-- Story Photo Placeholder -->
+        <div class="story-media">
+          <div class="media-placeholder" id="placeholder-story" data-auto-img="story.jpg">
+            <!-- To replace with your story photo, add: <img src="story.jpg" alt="Presidential Education Award"> -->
+            <div class="icon-wrapper">
+              <i class="fa-solid fa-landmark"></i>
+            </div>
+            <h4>
+              <span data-lang="en">Presidential Education Award Ceremony</span>
+              <span data-lang="zh">總統教育獎頒獎照片</span>
+            </h4>
+            <p>
+              <span data-lang="en">Reserved for your award photo with the President</span>
+              <span data-lang="zh">預留給您與總統的合照</span>
+            </p>
+            <code>source/about/story.jpg</code>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Work Experience Section -->
+  <section id="experience" class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-eyebrow" data-lang="en">Career &amp; Engineering</span>
+        <span class="section-eyebrow" data-lang="zh">專業與工作經歷</span>
+        <h2 class="section-title">
+          <span data-lang="en">Work Experience</span>
+          <span data-lang="zh">專業經歷</span>
+        </h2>
+        <p class="section-subtitle">
+          <span data-lang="en">Proven expertise in low-level firmware, driver validation, and multimedia systems.</span>
+          <span data-lang="zh">深耕底層軟韌體架構、驅動程式開發與多媒體硬體驗證。</span>
+        </p>
+      </div>
+
+      <div class="timeline">
+        <!-- Experience 1: Google -->
+        <div class="timeline-item">
+          <div class="timeline-header">
+            <div>
+              <h3 class="timeline-role" data-lang="en">Associate Software Engineer</h3>
+              <h3 class="timeline-role" data-lang="zh">Associate Software Engineer</h3>
+              <div class="timeline-company">
+                <i class="fa-brands fa-google"></i>
+                <span>Google</span>
+              </div>
+            </div>
+            <span class="timeline-date">Sep 2024 - Aug 2026</span>
+          </div>
+          <ul class="timeline-desc">
+            <li>
+              <span data-lang="en">Led low-level driver development and pre-silicon EDA bring-up for a flagship mobile
+                SoC's ISP accelerator, managing power/reset sequences and multi-frame stripe DMA programming.</span>
+              <span data-lang="zh">主導旗艦手機 SoC 之 ISP 加速器底層驅動開發與 pre-silicon EDA bring-up，負責電源重置時序、多幀 stripe DMA
+                硬體行為驗證。</span>
+            </li>
+            <li>
+              <span data-lang="en">Eliminated premature power-off system hangs during dynamic block power-gating by
+                engineering a context-switch counter across dual round-robin hardware threads for deterministic shutdown
+                synchronization.</span>
+              <span data-lang="zh">透過雙輪詢（round-robin）硬體執行緒設計 context-switch
+                計數器，解決動態電源門控（power-gating）期間之系統當機問題，實現精準關機同步。</span>
+            </li>
+            <li>
+              <span data-lang="en">Refactored a Python ISP golden data tool by migrating to a monorepo, decoupling
+                pattern-level Bazel dependencies, and caching pre-built GCS binaries, slashing runtime from ~15 mins to
+                &lt;40s.</span>
+              <span data-lang="zh">重構 Python ISP golden data 工具鏈，遷移至 monorepo、解耦 Bazel pattern 級依賴並導入 GCS 快取，將執行耗時自 ~15
+                分鐘驟降至 40 秒以內。</span>
+            </li>
+            <li>
+              <span data-lang="en">Built an automated CI/CD golden data pipeline (Python/Bash) to prevent C-Model
+                version drift, utilizing syscall sandboxing and Git sparse-checkout to selectively update modified
+                patterns in a 200GB+ repo.</span>
+              <span data-lang="zh">建置自動化 CI/CD pipeline（Python/Bash），結合系統呼叫沙盒與 Git sparse-checkout，高效驗證 200GB+ 大型代碼庫之
+                C-Model 版本一致性。</span>
+            </li>
+          </ul>
+          <div class="skill-pills">
+            <span class="pill">Device Drivers</span>
+            <span class="pill">Pre-Silicon EDA Bring-up</span>
+            <span class="pill">Stripe DMA</span>
+            <span class="pill">Power-Gating &amp; IRQ</span>
+            <span class="pill">Python &amp; Bazel</span>
+            <span class="pill">CI/CD Pipeline</span>
+          </div>
+        </div>
+
+        <!-- Experience 2: Innodisk -->
+        <div class="timeline-item">
+          <div class="timeline-header">
+            <div>
+              <h3 class="timeline-role" data-lang="en">Firmware Engineer Intern</h3>
+              <h3 class="timeline-role" data-lang="zh">韌體實習工程師</h3>
+              <div class="timeline-company">
+                <i class="fa-solid fa-hard-drive"></i>
+                <span data-lang="en">Innodisk Corporation (宜鼎國際)</span>
+                <span data-lang="zh">宜鼎國際股份有限公司</span>
+              </div>
+            </div>
+            <span class="timeline-date">Jul 2023 - Aug 2023</span>
+          </div>
+          <ul class="timeline-desc">
+            <li>
+              <span data-lang="en">Developed a RAMDISK project focusing on data retention and embedded storage.</span>
+              <span data-lang="zh">參與 RAMDISK 專案研發，專注於高速嵌入式儲存與資料持久化（Data Retention）。</span>
+            </li>
+            <li>
+              <span data-lang="en">Wrote firmware enabling DRAM to save data to SSD during sudden power loss.</span>
+              <span data-lang="zh">撰寫底層韌體，使系統在遭遇異常斷電時能將 DRAM 快取資料即刻安全回寫至 SSD。</span>
+            </li>
+            <li>
+              <span data-lang="en">Implemented data restoration to DRAM upon subsequent power-up.</span>
+              <span data-lang="zh">實作資料還原機制，於下次開機通電時自動將資料自 SSD 完整恢復至 DRAM。</span>
+            </li>
+          </ul>
+          <div class="skill-pills">
+            <span class="pill">Firmware</span>
+            <span class="pill">RAMDISK</span>
+            <span class="pill">Data Retention</span>
+            <span class="pill">Power-Loss Protection</span>
+            <span class="pill">SSD Storage</span>
+          </div>
+        </div>
+
+        <!-- Experience 3: Mathison Technology -->
+        <div class="timeline-item">
+          <div class="timeline-header">
+            <div>
+              <h3 class="timeline-role" data-lang="en">AI Software Engineer</h3>
+              <h3 class="timeline-role" data-lang="zh">AI 軟體工程師</h3>
+              <div class="timeline-company">
+                <i class="fa-solid fa-chart-line"></i>
+                <span data-lang="en">Mathison Technology (麥錫森智能科技)</span>
+                <span data-lang="zh">麥錫森智能科技股份有限公司</span>
+              </div>
+            </div>
+            <span class="timeline-date">Jul 2022 - Aug 2022</span>
+          </div>
+          <ul class="timeline-desc">
+            <li>
+              <span data-lang="en">Built specialized NLP sentiment models (finBERT, word2Vec, GRU, LSTM) to parse
+                Taiwanese market financial disclosures and news streams.</span>
+              <span data-lang="zh">建立金融情緒分析模型（finBERT、word2Vec、GRU、LSTM），分析台灣證券市場新聞與重大財報資訊。</span>
+            </li>
+            <li>
+              <span data-lang="en">Developed distributed web scrapers for stock exchange filings and analyzed empirical
+                correlation with stock price fluctuations.</span>
+              <span data-lang="zh">開發證交所與財經新聞爬蟲系統，深入研究市場重大訊息與個股波動之相關性。</span>
+            </li>
+          </ul>
+          <div class="skill-pills">
+            <span class="pill">NLP / finBERT</span>
+            <span class="pill">word2Vec</span>
+            <span class="pill">GRU &amp; LSTM</span>
+            <span class="pill">Financial Analytics</span>
+            <span class="pill">Python</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Projects Section -->
+  <section id="projects" class="section section-alt">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-eyebrow" data-lang="en">Featured Portfolio</span>
+        <span class="section-eyebrow" data-lang="zh">精選專案作品</span>
+        <h2 class="section-title">
+          <span data-lang="en">Engineering Projects</span>
+          <span data-lang="zh">專案作品集</span>
+        </h2>
+        <p class="section-subtitle">
+          <span data-lang="en">Combining low-level system design with human-centric AI applications.</span>
+          <span data-lang="zh">結合底層系統架構設計與關懷人文的人工智慧應用。</span>
+        </p>
+      </div>
+
+      <div class="projects-grid">
+        <!-- Project 1: SAM (Master's Thesis) -->
+        <div class="project-card">
+          <div class="project-top">
+            <span class="project-category" data-lang="en">Storage Systems &amp; FTL</span>
+            <span class="project-category" data-lang="zh">快閃記憶體系統與 FTL 演算法</span>
+            <i class="fa-solid fa-hard-drive text-primary"></i>
+          </div>
+          <h3 class="project-title">
+            <span data-lang="en">SAM: Adaptive Management for TLC NAND Flash</span>
+            <span data-lang="zh">SAM: TLC 快閃記憶體自適應管理架構 (碩士論文)</span>
+          </h3>
+          <div class="project-award">
+            <i class="fa-solid fa-graduation-cap"></i>
+            <span data-lang="en">Master's Thesis (2025)</span>
+            <span data-lang="zh">國立臺灣科技大學碩士論文 (2025)</span>
+          </div>
+
+          <!-- Architecture Diagram Placeholder -->
+          <div class="project-media">
+            <div class="media-placeholder" id="placeholder-thesis" data-auto-img="thesis_arch.png">
+              <div class="icon-wrapper"><i class="fa-solid fa-diagram-project"></i></div>
+              <h4>
+                <span data-lang="en">Architecture Diagram</span>
+                <span data-lang="zh">系統架構圖</span>
+              </h4>
+              <code>source/about/thesis_arch.png</code>
+            </div>
+          </div>
+
+          <p class="project-desc">
+            <span data-lang="en">
+              Characterized threshold voltage (Vth) shifts on commercial TLC/QLC NAND; designed the SAM FTL integrating
+              2-level LRU hot/cold data separation, sliding-window WOM-v switching, and voltage-aware page allocation.
+              Engineered dual-threshold GC and heap-based intra/inter-area wear-leveling (0.009% metadata overhead).
+              Validated on MSR enterprise traces, achieving 100% workload completion, 68.8% fewer erasures, and up to
+              36.6% RBER reduction (0–3,000 P/E).
+            </span>
+            <span data-lang="zh">
+              針對商業 TLC/QLC NAND 進行臨界電壓（Vth）位移特徵分析，設計整合雙層 LRU 冷熱分離、滑動窗口 WOM-v 切換與電壓感知分頁分配的 SAM
+              快閃記憶體轉換層（FTL）。開發雙門檻垃圾回收（Dual-Threshold GC）與基於堆積（Heap）的區域磨損平衡演算法（僅 0.009% 額外元數據開銷）；經由 MSR 企業級負載驗證，達成 100%
+              工作負載完成率、抹除次數減少 68.8% 及高達 36.6% 的原始誤碼率（RBER）降低。
+            </span>
+          </p>
+          <div class="skill-pills">
+            <span class="pill">Flash Memory (FTL)</span>
+            <span class="pill">NAND Reliability</span>
+            <span class="pill">Wear-Leveling</span>
+            <span class="pill">Dual-Threshold GC</span>
+            <span class="pill">MSR Enterprise Traces</span>
+            <span class="pill">C / C++</span>
+          </div>
+        </div>
+
+        <!-- Project 2: QEMU VirtIO Lab -->
+        <div class="project-card">
+          <div class="project-top">
+            <span class="project-category" data-lang="en">Linux Kernel &amp; Virtualization</span>
+            <span class="project-category" data-lang="zh">Linux 核心與虛擬化驅動</span>
+            <i class="fa-solid fa-microchip text-primary"></i>
+          </div>
+          <h3 class="project-title">
+            <span data-lang="en">QEMU VirtIO Lab: Virtualization &amp; Driver Design</span>
+            <span data-lang="zh">QEMU VirtIO 核心虛擬化與驅動設計實驗室</span>
+          </h3>
+          <p class="project-desc">
+            <span data-lang="en">
+              Implemented hands-on VirtIO device emulation and kernel driver development from scratch within QEMU and
+              Linux kernel environments. Explored virtqueue mechanics (split and packed ring buffers), DMA memory
+              mapping, and MSI-X interrupt routing to master modern hypervisor-to-guest hardware emulation and real-time
+              device driver pipelines.
+            </span>
+            <span data-lang="zh">
+              於 QEMU 與 Linux 核心環境中從頭實作 VirtIO 裝置模擬與核心驅動程式。深入鑽研 virtqueue 環狀緩衝區機制（split / packed ring）、DMA 記憶體映射與 MSI-X
+              中斷導向，完整掌握虛擬化硬體模擬與核心驅動程式之高效通訊管線。
+            </span>
+          </p>
+          <div class="skill-pills">
+            <span class="pill">Linux Kernel</span>
+            <span class="pill">VirtIO</span>
+            <span class="pill">QEMU</span>
+            <span class="pill">Device Drivers</span>
+            <span class="pill">Virtqueue / DMA</span>
+            <span class="pill">C</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/samwang1228/qemu-virtio-lab" target="_blank" rel="noopener noreferrer"
+              class="project-link-btn">
+              <i class="fa-brands fa-github"></i>
+              <span data-lang="en">View on GitHub</span>
+              <span data-lang="zh">在 GitHub 上查看</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Project 3: Dia-Sensor -->
+        <div class="project-card">
+          <div class="project-top">
+            <span class="project-category" data-lang="en">Assistive Tech &amp; IoT</span>
+            <span class="project-category" data-lang="zh">智慧輔具與物聯網</span>
+            <i class="fa-solid fa-heart-pulse text-primary"></i>
+          </div>
+          <h3 class="project-title">
+            <span data-lang="en">Dia-Sensor: Automated Diabetic Foot Screening</span>
+            <span data-lang="zh">Dia-Sensor 自動化糖尿病足檢測系統</span>
+          </h3>
+          <div class="project-award">
+            <i class="fa-solid fa-trophy"></i>
+            <span data-lang="en">2022 NTU Big Health Competition Special Award</span>
+            <span data-lang="zh">2022 臺大大健康創業創意競賽「特別獎」</span>
+          </div>
+
+          <!-- Project Photo Placeholder -->
+          <div class="project-media">
+            <div class="media-placeholder" id="placeholder-diasensor" data-auto-img="diasensor.jpg">
+              <div class="icon-wrapper"><i class="fa-solid fa-image"></i></div>
+              <h4>
+                <span data-lang="en">Project Photo</span>
+                <span data-lang="zh">專案成果照片</span>
+              </h4>
+              <code>source/about/diasensor.jpg</code>
+            </div>
+          </div>
+
+          <p class="project-desc">
+            <span data-lang="en">
+              Engineered an accessible home screening station to solve hospital-bound diabetic neuropathy testing.
+              Utilized Raspberry Pi and precision sensors to assess tactile sensation, automatically uploading clinical
+              data to the cloud for remote specialist monitoring. Featured across national media including ETtoday and
+              CNA.
+            </span>
+            <span data-lang="zh">
+              為改善傳統糖尿病足檢測需頻繁赴醫且費時的痛點，結合樹莓派（Raspberry Pi）、觸覺檢測感測器與雲端資料庫，開發讓病患在家即能自行快篩的檢測系統，資料自動同步至醫師端平台預防病變。獲中央社、ETtoday
+              等多家主流新聞專題報導。
+            </span>
+          </p>
+          <div class="skill-pills">
+            <span class="pill">Raspberry Pi</span>
+            <span class="pill">Sensor Integration</span>
+            <span class="pill">Python</span>
+            <span class="pill">Cloud Telemetry</span>
+            <span class="pill">Bootstrap</span>
+          </div>
+          <div class="project-links">
+            <a href="https://youtu.be/iAaBXg97Y2U?si=H56Jje7S2gVKMESE" target="_blank" rel="noopener noreferrer"
+              class="project-link-btn project-link-video">
+              <i class="fa-brands fa-youtube"></i>
+              <span data-lang="en">Watch Demo Video</span>
+              <span data-lang="zh">觀看展示影片</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Project 4: Spark Video -->
+        <div class="project-card">
+          <div class="project-top">
+            <span class="project-category" data-lang="en">AI &amp; Computer Vision</span>
+            <span class="project-category" data-lang="zh">電腦視覺與深度學習</span>
+            <i class="fa-solid fa-video text-primary"></i>
+          </div>
+          <h3 class="project-title">
+            <span data-lang="en">Spark Video: Sports Action &amp; Music Generation</span>
+            <span data-lang="zh">Spark Video 運動動作辨識與音樂自動生成</span>
+          </h3>
+          <div class="project-award">
+            <i class="fa-solid fa-trophy"></i>
+            <span data-lang="en">5G Pioneer Innovation Competition Finalist</span>
+            <span data-lang="zh">5G 領航創新應用競賽初賽入圍</span>
+          </div>
+
+          <!-- Project Photo Placeholder -->
+          <div class="project-media">
+            <div class="media-placeholder" id="placeholder-sparkvideo" data-auto-img="sparkvideo.jpg">
+              <div class="icon-wrapper"><i class="fa-solid fa-image"></i></div>
+              <h4>
+                <span data-lang="en">Project Photo</span>
+                <span data-lang="zh">專案成果照片</span>
+              </h4>
+              <code>source/about/sparkvideo.jpg</code>
+            </div>
+          </div>
+
+          <p class="project-desc">
+            <span data-lang="en">
+              Developed an intelligent video platform that recognizes highlight actions (e.g. volleyball spikes, digs)
+              using YOLOv4/v6 and OpenPose, coupled with LSTM sequence analysis. Integrated facial sentiment and crowd
+              audio dynamics to automatically edit video highlights and compose matched background audio tracks.
+            </span>
+            <span data-lang="zh">
+              結合 YOLOv4/v6 目標偵測、OpenPose 姿態辨識與 LSTM 時序模型，精準辨識排球等運動比賽中的精彩扣殺與防守動作，並結合球員表情與觀眾情緒分析，全自動剪輯賽事精華並智慧配樂。
+            </span>
+          </p>
+          <div class="skill-pills">
+            <span class="pill">YOLOv4/v6</span>
+            <span class="pill">OpenPose</span>
+            <span class="pill">LSTM</span>
+            <span class="pill">PyTorch</span>
+            <span class="pill">Multimedia Pipeline</span>
+          </div>
+          <div class="project-links">
+            <a href="https://youtu.be/vlkHImXyqbc?si=Www5jHqvQcjUlBpO" target="_blank" rel="noopener noreferrer"
+              class="project-link-btn project-link-video">
+              <i class="fa-brands fa-youtube"></i>
+              <span data-lang="en">Watch Demo Video</span>
+              <span data-lang="zh">觀看展示影片</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Awards & Honors Section -->
+  <section id="awards" class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-eyebrow" data-lang="en">Recognition &amp; Honors</span>
+        <span class="section-eyebrow" data-lang="zh">榮譽與成就</span>
+        <h2 class="section-title">
+          <span data-lang="en">Awards &amp; Gallery</span>
+          <span data-lang="zh">獎項榮譽與相片牆</span>
+        </h2>
+        <p class="section-subtitle">
+          <span data-lang="en">Milestones acknowledging academic diligence, engineering innovation, and
+            perseverance.</span>
+          <span data-lang="zh">見證學業專精、技術創新與堅持不懈的榮譽里程碑。</span>
+        </p>
+      </div>
+
+      <!-- Awards List: 2-Column Grid -->
+      <div class="awards-list-grid">
+        <div class="award-item">
+          <div class="award-icon"><i class="fa-solid fa-award"></i></div>
+          <div class="award-info">
+            <h4>
+              <span data-lang="en">2023 Presidential Education Award</span>
+              <span data-lang="zh">2023 總統教育獎</span>
+            </h4>
+            <p>
+              <span data-lang="en">Honored for technological excellence, academic distinction, and inspiring
+                resilience.</span>
+              <span data-lang="zh">表彰克服身體限制、在資訊科技與學術研究上的卓越成就與社會貢獻。</span>
+            </p>
+          </div>
+        </div>
+
+        <div class="award-item">
+          <div class="award-icon"><i class="fa-solid fa-star"></i></div>
+          <div class="award-info">
+            <h4>
+              <span data-lang="en">2024 E.SUN Talents Scholarship</span>
+              <span data-lang="zh">2024 玉山金控「E.SUN Talents」獎學金</span>
+            </h4>
+            <p>
+              <span data-lang="en">Prestigious competitive scholarship awarded to top engineering graduate
+                researchers.</span>
+              <span data-lang="zh">全國優秀頂尖研究生獎學金，肯定優秀研發潛能與研究成果。</span>
+            </p>
+          </div>
+        </div>
+
+        <div class="award-item">
+          <div class="award-icon"><i class="fa-solid fa-medal"></i></div>
+          <div class="award-info">
+            <h4>
+              <span data-lang="en">Foxconn Scholarship Whale Award</span>
+              <span data-lang="zh">鴻海科技集團「鴻海獎學鯨」</span>
+            </h4>
+            <p>
+              <span data-lang="en">Recipient across 4 consecutive editions (4th, 5th, 6th &amp; latest).</span>
+              <span data-lang="zh">連續四屆得主（第四屆、第五屆、第六屆等），肯定堅毅自強精神。</span>
+            </p>
+          </div>
+        </div>
+
+        <div class="award-item">
+          <div class="award-icon"><i class="fa-solid fa-palette"></i></div>
+          <div class="award-info">
+            <h4>
+              <span data-lang="en">2016 Presidential Education Award</span>
+              <span data-lang="zh">2016 總統教育獎</span>
+            </h4>
+            <p>
+              <span data-lang="en">Awarded for overcoming severe physical adversity and inspiring through artistic
+                creation.</span>
+              <span data-lang="zh">以畫筆突破生命困境、彩繪生命感動社會，獲總統親自頒發肯定。</span>
+            </p>
+          </div>
+        </div>
+
+        <div class="award-item">
+          <div class="award-icon"><i class="fa-solid fa-trophy"></i></div>
+          <div class="award-info">
+            <h4>
+              <span data-lang="en">27th Golden Eagle Award for Persons with Disabilities</span>
+              <span data-lang="zh">第 27 屆身心障礙楷模金鷹獎</span>
+            </h4>
+            <p>
+              <span data-lang="en">Highest national honor awarded by the Ministry of Health and Welfare, acknowledging
+                exceptional societal contributions.</span>
+              <span data-lang="zh">衛生福利部頒發之全國身心障礙楷模最高榮譽，肯定突破自我與傑出社會貢獻。</span>
+            </p>
+          </div>
+        </div>
+
+        <div class="award-item">
+          <div class="award-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+          <div class="award-info">
+            <h4>
+              <span data-lang="en">CGU Dean's List (Rank 2 / Top 3.4%)</span>
+              <span data-lang="zh">長庚大學資工系書卷獎（系排第 2 名，前 3.4%）</span>
+            </h4>
+            <p>
+              <span data-lang="en">Graduated with top academic standing across computer science curriculum.</span>
+              <span data-lang="zh">資工系歷年學業總成績頂尖，多次榮獲書卷獎肯定。</span>
+            </p>
+          </div>
+        </div>
+
+        <div class="award-item award-featured">
+          <div class="award-icon"><i class="fa-solid fa-code"></i></div>
+          <div class="award-info">
+            <h4>
+              <span data-lang="en">iThome Ironman 30-Day Challenge Finisher</span>
+              <span data-lang="zh">第 14 屆 iT 邦幫忙鐵人賽完賽獲獎（30天打造 Line Bot）</span>
+            </h4>
+            <p>
+              <span data-lang="en">Authored a 30-day practical guide on building multi-functional Line Bots integrated
+                with Flask and SQLite. Implemented Line LIFF (Web app), secure webhook handshakes, and cloud deployment
+                pipelines via Render.io.</span>
+              <span data-lang="zh">撰寫連續 30 天實戰教學，深度解析如何結合 Flask 與 SQLite 建構多功能 Line Bot，並實作 Line LIFF 網頁應用、安全 Webhook
+                驗證與 Render.io 雲端自動化部署。</span>
+            </p>
+            <div style="margin-top: 10px;">
+              <a href="https://ithelp.ithome.com.tw/users/20156616/ironman/5998" target="_blank"
+                rel="noopener noreferrer" class="project-link-btn" style="font-size: 0.8125rem; padding: 4px 12px;">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                <span data-lang="en">Read Series on iT邦幫忙</span>
+                <span data-lang="zh">在 iT 邦幫忙上閱讀系列文</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Awards Gallery: Asymmetrical Bento Grid -->
+      <div class="gallery-section">
+        <div class="gallery-section-header">
+          <div class="gallery-icon-pill">
+            <i class="fa-solid fa-camera"></i>
+          </div>
+          <div>
+            <h3 class="gallery-section-title">
+              <span data-lang="en">Moments of Honor &amp; Ceremonies</span>
+              <span data-lang="zh">獲獎殊榮與典禮紀錄</span>
+            </h3>
+            <p class="gallery-section-desc">
+              <span data-lang="en">Highlights from presidential recognition, corporate scholarships, and tech
+                competitions.</span>
+              <span data-lang="zh">總統接見、企業獎學金頒獎盛典與各項技術競賽之榮耀紀實。</span>
+            </p>
+          </div>
+        </div>
+
+        <div class="bento-gallery">
+          <!-- Item 1: Wide panoramic banner (award5.jpg) -->
+          <div class="bento-card bento-wide">
+            <img src="award5.jpg" alt="5G Pioneer Innovation Competition Finalist" loading="lazy" class="bento-img">
+            <div class="bento-overlay">
+              <span class="bento-tag" data-lang="en">5G Innovation</span>
+              <span class="bento-tag" data-lang="zh">5G 創新競賽</span>
+              <h4 class="bento-caption">
+                <span data-lang="en">5G Pioneer Innovation Competition Finalist</span>
+                <span data-lang="zh">5G 領航創新應用競賽決賽</span>
+              </h4>
+            </div>
+          </div>
+
+          <!-- Item 2: Standard card (award1.jpg) -->
+          <div class="bento-card bento-standard">
+            <img src="award1.jpg" alt="E.SUN Talents Scholarship Award" loading="lazy" class="bento-img">
+            <div class="bento-overlay">
+              <span class="bento-tag" data-lang="en">Scholarship</span>
+              <span class="bento-tag" data-lang="zh">優秀研發</span>
+              <h4 class="bento-caption">
+                <span data-lang="en">E.SUN Talents Fellowship Ceremony</span>
+                <span data-lang="zh">玉山金控 E.SUN 獎學金頒獎典禮</span>
+              </h4>
+            </div>
+          </div>
+
+          <!-- Item 3: Standard card (award2.jpg) -->
+          <div class="bento-card bento-standard">
+            <img src="award2.jpg" alt="Foxconn Scholarship Whale Award" loading="lazy" class="bento-img">
+            <div class="bento-overlay">
+              <span class="bento-tag" data-lang="en">Fellowship</span>
+              <span class="bento-tag" data-lang="zh">自強不息</span>
+              <h4 class="bento-caption">
+                <span data-lang="en">Foxconn Scholarship Whale Award</span>
+                <span data-lang="zh">鴻海科技集團 鴻海獎學鯨授獎</span>
+              </h4>
+            </div>
+          </div>
+
+          <!-- Item 4: Standard card (award3.jpg) -->
+          <div class="bento-card bento-standard">
+            <img src="award3.jpg" alt="27th Golden Eagle Award for Persons with Disabilities" loading="lazy"
+              class="bento-img">
+            <div class="bento-overlay">
+              <span class="bento-tag" data-lang="en">Golden Eagle</span>
+              <span class="bento-tag" data-lang="zh">金鷹獎</span>
+              <h4 class="bento-caption">
+                <span data-lang="en">27th Golden Eagle Award for Persons with Disabilities</span>
+                <span data-lang="zh">第 27 屆身心障礙楷模金鷹獎</span>
+              </h4>
+            </div>
+          </div>
+
+          <!-- Item 5: Standard card (ithelp.jpg) -->
+          <div class="bento-card bento-standard">
+            <img src="ithelp.jpg" alt="iThome Ironman Trophy" loading="lazy" class="bento-img">
+            <div class="bento-overlay">
+              <span class="bento-tag" data-lang="en">Community</span>
+              <span class="bento-tag" data-lang="zh">社群貢獻</span>
+              <h4 class="bento-caption">
+                <span data-lang="en">iThome Ironman 30-Day Trophy</span>
+                <span data-lang="zh">iT 邦幫忙 30 天鐵人賽完賽紀念</span>
+              </h4>
+            </div>
+          </div>
+
+          <!-- Item 6: Wide panoramic banner (award6.jpg) -->
+          <div class="bento-card bento-wide">
+            <img src="award6.jpg" alt="2022 NTU Big Health Competition Special Award" loading="lazy" class="bento-img">
+            <div class="bento-overlay">
+              <span class="bento-tag" data-lang="en">Special Award</span>
+              <span class="bento-tag" data-lang="zh">大健康特別獎</span>
+              <h4 class="bento-caption">
+                <span data-lang="en">2022 NTU Big Health Competition Special Award</span>
+                <span data-lang="zh">2022 臺大大健康創業創意競賽特別獎</span>
+              </h4>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact & Connect Section -->
+  <section id="contact" class="section section-alt">
+    <div class="container">
+      <div class="contact-card">
+        <h2>
+          <span data-lang="en">Let's Connect</span>
+          <span data-lang="zh">與我聯繫</span>
+        </h2>
+        <p>
+          <span data-lang="en">
+            I am always open to exploring challenging opportunities in embedded systems, Linux/kernel driver
+            development, or smart assistive technologies. Feel free to reach out!
+          </span>
+          <span data-lang="zh">
+            我非常樂意與各位探討嵌入式系統、Linux / LK 核心驅動開發，或智能輔具技術的合作與職涯機會。歡迎隨時與我聯繫交流！
+          </span>
+        </p>
+
+        <div class="contact-links">
+          <a href="mailto:samwang19991228@gmail.com" class="contact-btn">
+            <i class="fa-solid fa-envelope"></i>
+            <span>samwang19991228@gmail.com</span>
+          </a>
+          <a href="https://www.linkedin.com/in/sam-wang-4595a8251" target="_blank" rel="noopener noreferrer"
+            class="contact-btn">
+            <i class="fa-brands fa-linkedin"></i>
+            <span>LinkedIn</span>
+          </a>
+          <a href="https://github.com/samwang1228" target="_blank" rel="noopener noreferrer" class="contact-btn">
+            <i class="fa-brands fa-github"></i>
+            <span>GitHub</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>© 2026 Shao-Cheng Wang (王紹丞). Built with passion, resilience, and curiosity.</p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="script.js"></script>
+</body>
+
+</html>

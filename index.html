@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="google-site-verification" content="xBT4GhYoi5qRD5tr338pgPM5OWHHIDR6mNg1a3euekI" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="keyword"  content="">
+    <link rel="shortcut icon" href="/img/favicon.ico">
+
+    <title>
+        
+          Sam&#39;s Blog
+        
+    </title>
+
+    <link rel="canonical" href="https://samwang1228.github.io/">
+
+    <!-- Bootstrap Core CSS -->
+    
+<link rel="stylesheet" href="/css/bootstrap.min.css">
+
+
+    <!-- Custom CSS -->
+    
+<link rel="stylesheet" href="/css/hux-blog.min.css">
+
+
+    <!-- Pygments Highlight CSS -->
+    
+<link rel="stylesheet" href="/css/highlight.css">
+
+
+    <!-- Custom Fonts -->
+    <!-- <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"> -->
+    <!-- Hux change font-awesome CDN to qiniu -->
+    <link href="https://cdn.staticfile.org/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+
+    <!-- Hux Delete, sad but pending in China
+    <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/
+    css'>
+    -->
+
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- ga & ba script hoook -->
+    <script></script>
+<meta name="generator" content="Hexo 6.2.0"></head>
+
+
+<!-- hack iOS CSS :active style -->
+<body ontouchstart="">
+
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Sam&#39;s Blog</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <!-- Known Issue, found by Hux:
+            <nav>'s height woule be hold on by its content.
+            so, when navbar scale out, the <nav> will cover tags.
+            also mask any touch event of tags, unfortunately.
+        -->
+        <div id="huxblog_navbar">
+            <div class="navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+
+                    
+
+                        
+                    
+
+                        
+                    
+
+                        
+                        <li>
+                            <a href="/archives/">Archives</a>
+                        </li>
+                        
+                    
+
+                        
+                        <li>
+                            <a href="/about/">About | Shao-Cheng Wang (王紹丞)</a>
+                        </li>
+                        
+                    
+
+                        
+                    
+
+                        
+                    
+
+                        
+                        <li>
+                            <a href="/tags/">Tags</a>
+                        </li>
+                        
+                    
+                    
+                </ul>
+            </div>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+<script>
+    // Drop Bootstarp low-performance Navbar
+    // Use customize navbar with high-quality material design animation
+    // in high-perf jank-free CSS3 implementation
+    var $body   = document.body;
+    var $toggle = document.querySelector('.navbar-toggle');
+    var $navbar = document.querySelector('#huxblog_navbar');
+    var $collapse = document.querySelector('.navbar-collapse');
+
+    $toggle.addEventListener('click', handleMagic)
+    function handleMagic(e){
+        if ($navbar.className.indexOf('in') > 0) {
+        // CLOSE
+            $navbar.className = " ";
+            // wait until animation end.
+            setTimeout(function(){
+                // prevent frequently toggle
+                if($navbar.className.indexOf('in') < 0) {
+                    $collapse.style.height = "0px"
+                }
+            },400)
+        }else{
+        // OPEN
+            $collapse.style.height = "auto"
+            $navbar.className += " in";
+        }
+    }
+</script>
+
+
+    <!-- Main Content -->
+    <!-- Page Header -->
+<header class="intro-header" style="background-image: url('/img/home-bg.jpg')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 ">
+                <div class="site-heading">
+                    <h1>Sam&#39;s Blog</h1>
+                    <!--<hr class="small">-->
+                    <span class="subheading">To Be A Lean Developer!</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+
+
+<!-- Main Content -->
+<div class="container">
+    <div class="row">
+        
+
+<!-- USE SIDEBAR -->
+    <!-- Post Container -->
+            <div class="
+                col-lg-8 col-lg-offset-1
+                col-md-8 col-md-offset-1
+                col-sm-12
+                col-xs-12
+                post-container
+            ">
+            
+                <!-- Main Content -->
+
+
+<div class="post-preview">
+
+    <a href="/2022/08/15/dataframe/">
+        <h2 class="post-title">
+            Dataframe基礎教學
+        </h2>
+        <h3 class="post-subtitle">
+            紀錄這個暑假使用dataframe之筆記
+        </h3>
+        <div class="post-content-preview">
+            
+使用台股2022年7月營收做為範例
+
+取值取值相當方便只要df[‘colName’]就好,但記得要import套件。爬蟲程式請參考這篇
+1234567891011121314151617181920import pandas as pdimport datetimeyear=datetime.date.today().yearmonth=datetime.date.today().mont......
+        </div>
+    </a>
+    <p class="post-meta">
+        Posted by Sam wang on
+        2022-08-15
+    </p>
+
+</div>
+<hr>
+
+<div class="post-preview">
+
+    <a href="/2022/07/17/leetcode75-1/">
+        <h2 class="post-title">
+            leetcode 75 Level 1
+        </h2>
+        <h3 class="post-subtitle">
+            提供source code跟解題思路
+        </h3>
+        <div class="post-content-preview">
+            
+最近改刷常考的面試題leetcode 75，歡迎一起討論留言告訴我你的思路:)
+
+
+
+Day 1 Greedy
+724. Find Pivot Index
+
+
+Day 2 String(待補)
+205. Isomorphic Strings
+392. Is Subsequence
+
+
+Day 3 Linked List(待補)
+21. Merge Two Sorted Lists
+206.......
+        </div>
+    </a>
+    <p class="post-meta">
+        Posted by Sam wang on
+        2022-07-17
+    </p>
+
+</div>
+<hr>
+
+<div class="post-preview">
+
+    <a href="/2022/07/05/institutionalInvestors/">
+        <h2 class="post-title">
+            三大法人與籌碼
+        </h2>
+        <h3 class="post-subtitle">
+            介紹三大法人與籌碼基礎知識
+        </h3>
+        <div class="post-content-preview">
+            
+前言影響股價最劇烈的往往是籌碼面，然而你連三大法人是什麼都不知道嗎?知道三大法人卻不知道有什麼用嗎?
+
+ 看這篇就對了! 
+介紹首先法人有分自然人與法人
+——法人自然人單位公司、協會、基金會等組織單位是被法律所承認的機構團體你、我、他等享有基本人權的個人地位外資、投信、自營商等三大法人像我們這樣的散戶QAQ
+
+
+搞懂後一定還會有一個疑問，外資、投信、自營商又是什麼呢?
+
+外資顧名思義就是台......
+        </div>
+    </a>
+    <p class="post-meta">
+        Posted by Sam wang on
+        2022-07-05
+    </p>
+
+</div>
+<hr>
+
+<div class="post-preview">
+
+    <a href="/2022/06/30/HEXO/">
+        <h2 class="post-title">
+            HEXO 2022
+        </h2>
+        <h3 class="post-subtitle">
+            用hexo以及github page建置自己的blog
+        </h3>
+        <div class="post-content-preview">
+            前言
+為什麼要撰寫自己的Blog呢?
+
+首先Blog可以記錄自己的成長且在繳交履歷時也能附上，同時也能證明自己外也能吸引別人來觀看以提升知名度。
+
+為什麼要用hexo呢?
+
+而選擇hexo是因為:
+
+可以部署到自己的github更能證明是自己的，同時github page是免費的
+hexo有提供100多種模板所以美編不好的工程師也能寫出好看的Blog
+文章皆採用markdown語法可以讓你更......
+        </div>
+    </a>
+    <p class="post-meta">
+        Posted by Sam wang on
+        2022-06-30
+    </p>
+
+</div>
+<hr>
+
+<div class="post-preview">
+
+    <a href="/2022/06/28/IMAPOST/">
+        <h2 class="post-title">
+            LeetCode(Easy)
+        </h2>
+        <h3 class="post-subtitle">
+            紀錄解題過程以及提供source code
+        </h3>
+        <div class="post-content-preview">
+            
+根據不同的題目類型進行分類，歡迎一起討論留言告訴我你的思路:)
+
+Linked list
+83.Remove Duplicates from Sorted List
+
+
+Greedy
+53.Maximum Subarray
+yyyy
+
+
+Algorithm
+35.Search Insert Position
+
+
+Basic Logic
+27.Remove Element
+
+
+
+
+83.Re......
+        </div>
+    </a>
+    <p class="post-meta">
+        Posted by Sam wang on
+        2022-06-28
+    </p>
+
+</div>
+<hr>
+
+
+
+<!-- Pager -->
+
+<ul class="pager">
+    
+    
+</ul>
+
+
+
+                <!-- 如果开启评论功能 -->
+                
+
+            </div>
+    <!-- Sidebar Container -->
+            <div class="
+                col-lg-3 col-lg-offset-0
+                col-md-3 col-md-offset-0
+                col-sm-12
+                col-xs-12
+                sidebar-container
+            ">
+                <!-- Featured Tags -->
+                
+                <section>
+                    <!-- no hr -->
+                    <h5><a href="/tags/">FEATURED TAGS</a></h5>
+                    <div class="tags">
+                        
+                            
+                            <a href="/tags/#hexo" title="hexo" rel="1">hexo</a>
+                            
+                        
+                            
+                            <a href="/tags/#LeetCode" title="LeetCode" rel="2">LeetCode</a>
+                            
+                        
+                            
+                            <a href="/tags/#python" title="python" rel="1">python</a>
+                            
+                        
+                            
+                            <a href="/tags/#籌碼面" title="籌碼面" rel="1">籌碼面</a>
+                            
+                        
+                            
+                            <a href="/tags/#投資教學" title="投資教學" rel="1">投資教學</a>
+                            
+                        
+                    </div>
+                </section>
+                
+
+                <!-- Short About -->
+                <section class="visible-md visible-lg">
+                    <hr><h5><a href="/about/">ABOUT ME</a></h5>
+                    <div class="short-about">
+
+                        
+                            <img src="/img/me.jpg" />
+                        
+
+                        
+                            <p>大家好，我是王紹丞，就讀 長庚大學資訊工程學系，平時的興趣是畫圖跟寫程式，我將在這裡紀錄我的繪畫作品 、金融筆記、刷題記錄、side project等，謝謝您拜訪此網站</p>
+                        
+
+                        <!-- SNS Link -->
+                        <ul class="list-inline">
+                            
+                            
+                            
+
+                            
+
+                            
+                                <li>
+                                    <a target="_blank" href="https://www.facebook.com/profile.php?id=100007093326898">
+                                        <span class="fa-stack fa-lg">
+                                            <i class="fa fa-circle fa-stack-2x"></i>
+                                            <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+                                        </span>
+                                    </a>
+                                </li>
+                            
+
+                            
+                                <li>
+                                    <a target="_blank"  href="https://github.com/samwang1228">
+                                        <span class="fa-stack fa-lg">
+                                            <i class="fa fa-circle fa-stack-2x"></i>
+                                            <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                        </span>
+                                    </a>
+                                </li>
+                            
+                            
+                            
+                            
+                        </ul>
+                    </div>
+                </section>
+                
+                <!-- Friends Blog -->
+                
+                <hr>
+                <h5>FRIENDS</h5>
+                <ul class="list-inline">
+
+                    
+                        <li><a href="https://www.facebook.com/profile.php?id=100007093326898" target="_blank">sam&#39;s fb</a></li>
+                    
+                        <li><a href="http://huangxuan.me" target="_blank">Hux Blog</a></li>
+                    
+                        <li><a href="#" target="_blank">Foo</a></li>
+                    
+                        <li><a href="#" target="_blank">Bar</a></li>
+                    
+                        <li><a href="#" target="_blank">Example Friends</a></li>
+                    
+                        <li><a href="#" target="_blank">It helps SEO</a></li>
+                    
+                </ul>
+                
+            </div>
+        
+    </div>
+</div>
+
+
+    <!-- Footer -->
+    <!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                
+                
+                
+
+                
+
+                
+                    <li>
+                        <a target="_blank" href="https://www.facebook.com/profile.php?id=100007093326898">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                
+
+                
+                    <li>
+                        <a target="_blank"  href="https://github.com/samwang1228">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                
+
+                
+
+                </ul>
+                <p class="copyright text-muted">
+                    Copyright &copy; Sam&#39;s Blog 2026 
+                    <br>
+                    Theme by <a target="_blank" rel="noopener" href="http://huangxuan.me">Hux</a> 
+                    <span style="display: inline-block; margin: 0 5px;">
+                        <i class="fa fa-heart"></i>
+                    </span> 
+                    Ported by <a target="_blank" rel="noopener" href="http://blog.kaijun.rocks">Kaijun</a> | 
+                    <iframe
+                        style="margin-left: 2px; margin-bottom:-5px;"
+                        frameborder="0" scrolling="0" width="91px" height="20px"
+                        src="https://ghbtns.com/github-btn.html?user=kaijun&repo=hexo-theme-huxblog&type=star&count=true" >
+                    </iframe>
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- jQuery -->
+
+<script src="/js/jquery.min.js"></script>
+
+
+<!-- Bootstrap Core JavaScript -->
+
+<script src="/js/bootstrap.min.js"></script>
+
+
+<!-- Custom Theme JavaScript -->
+
+<script src="/js/hux-blog.min.js"></script>
+
+
+
+<!-- async load function -->
+<script>
+    function async(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+
+<!-- 
+     Because of the native support for backtick-style fenced code blocks 
+     right within the Markdown is landed in Github Pages, 
+     From V1.6, There is no need for Highlight.js, 
+     so Huxblog drops it officially.
+
+     - https://github.com/blog/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0  
+     - https://help.github.com/articles/creating-and-highlighting-code-blocks/    
+-->
+<!--
+    <script>
+        async("http://cdn.bootcss.com/highlight.js/8.6/highlight.min.js", function(){
+            hljs.initHighlightingOnLoad();
+        })
+    </script>
+    <link href="http://cdn.bootcss.com/highlight.js/8.6/styles/github.min.css" rel="stylesheet">
+-->
+
+
+<!-- jquery.tagcloud.js -->
+<script>
+    // only load tagcloud.js in tag.html
+    if($('#tag_cloud').length !== 0){
+        async("https://samwang1228.github.io/js/jquery.tagcloud.js",function(){
+            $.fn.tagcloud.defaults = {
+                //size: {start: 1, end: 1, unit: 'em'},
+                color: {start: '#bbbbee', end: '#0085a1'},
+            };
+            $('#tag_cloud a').tagcloud();
+        })
+    }
+</script>
+
+<!--fastClick.js -->
+<script>
+    async("https://cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function(){
+        var $nav = document.querySelector("nav");
+        if($nav) FastClick.attach($nav);
+    })
+</script>
+
+
+<!-- Google Analytics -->
+
+
+<script>
+    // dynamic User by Hux
+    var _gaId = 'G-31R3W81QC4';
+    var _gaDomain = 'undefined';
+
+    // Originial
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', _gaId, _gaDomain);
+    ga('send', 'pageview');
+</script>
+
+
+
+
+<!-- Baidu Tongji -->
+
+
+<!-- Side Catalog -->
+
+
+
+
+
+<!-- Image to hack wechat -->
+<img src="https://samwang1228.github.io/img/icon_wechat.png" width="0" height="0" />
+<!-- Migrate from head to bottom, no longer block render and still work -->
+
+</body>
+
+</html>
