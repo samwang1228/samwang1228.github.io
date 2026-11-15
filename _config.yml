@@ -4,8 +4,8 @@
 
 # Site
 title: Sam's Blog
-subtitle: To Be A Lean Developer!
-author: Sam wang
+subtitle: Defying constraints on the canvas, architecting possibilities in the kernel!
+author: Sam Wang
 language: zh-TW
 timezone:
 
@@ -32,8 +32,8 @@ keyword: ""
 # zhihu_username:     Demonbane
 github_username:    samwang1228
 # twitter_username:   Demonbane_x
-facebook_username:  profile.php?id=100007093326898
-# linkedin_username:  kaijun-chen-42089354
+# facebook_username:  profile.php?id=100007093326898
+linkedin_username:  sam-wang-4595a8251
 # instagram username: sam_art1228
 # Build settings
 anchorjs: true                          # if you want to customize anchor. check out line:181 of `post.html`
@@ -58,9 +58,7 @@ ga_track_id: 'G-31R3W81QC4'            # Format: UA-xxxxxx-xx
 
 # Sidebar settings
 sidebar: true                           # whether or not using Sidebar.
-sidebar-about-description: "大家好，我是王紹丞，就讀
-長庚大學資訊工程學系，平時的興趣是畫圖跟寫程式，我將在這裡紀錄我的繪畫作品
-、金融筆記、刷題記錄、side project等，謝謝您拜訪此網站"
+sidebar-about-description: "專注於底層系統架構、ARM64 軟韌體開發與智能輔具研發；熱愛繪畫創作與在 0 與 1 之間探索無限可能。"
 sidebar-avatar: img/me.jpg      # use absolute URL, seeing it's used in both `/` and `/about/`
 
 
@@ -72,23 +70,8 @@ featured-condition-size: 0              # A tag will be featured if the size of 
 # Friends
 friends: [
     {
-        title: "sam's fb",
-        href: "https://www.facebook.com/profile.php?id=100007093326898"
-    },{
-        title: "Hux Blog",
-        href: "http://huangxuan.me"
-    },{
-        title: "Foo",
-        href: "#"
-    },{
-        title: "Bar",
-        href: "#"
-    },{
-        title: "Example Friends",
-        href: "#"
-    },{
-        title: "It helps SEO",
-        href: "#"
+        title: "Sam's Art (Instagram)",
+        href: "https://www.instagram.com/sam_art1228/"
     }
 ]
 
