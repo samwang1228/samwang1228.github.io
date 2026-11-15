@@ -26,7 +26,7 @@
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-31R3W81QC4"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
+    function gtag() { dataLayer.push(arguments); }
     gtag('js', new Date());
 
     gtag('config', 'G-31R3W81QC4');
@@ -127,6 +127,11 @@
               <span data-lang="zh">臺科大資工碩士</span>
             </div>
             <div class="highlight-tag">
+              <i class="fa-solid fa-hard-drive"></i>
+              <span data-lang="en">Storage Systems</span>
+              <span data-lang="zh">儲存系統</span>
+            </div>
+            <div class="highlight-tag">
               <i class="fa-solid fa-heart-pulse"></i>
               <span data-lang="en">Assistive Tech Mission</span>
               <span data-lang="zh">智慧輔具研發願景</span>
@@ -152,8 +157,15 @@
 
         <!-- Profile Photo -->
         <div class="hero-media">
-          <div class="profile-card">
-            <img src="profile.jpg" alt="Shao-Cheng Wang (王紹丞)" class="profile-img">
+          <div class="profile-card-wrapper">
+            <div class="profile-card">
+              <img src="profile.jpg" alt="Shao-Cheng Wang (王紹丞)" class="profile-img">
+            </div>
+            <div class="profile-status-badge">
+              <span class="status-dot"></span>
+              <span class="status-text" data-lang="en">Open to Innovate</span>
+              <span class="status-text" data-lang="zh">探索創新可能</span>
+            </div>
           </div>
         </div>
       </div>
@@ -186,50 +198,75 @@
           </h3>
           <p>
             <span data-lang="en">
-              At age 12, an acute viral infection severely impaired my motor nerves, requiring me to rely on a medical respirator. Rather than accepting physical limitations, I chose to break boundaries on the canvas and was honored with the <strong>2016 Presidential Education Award (Arts)</strong>. Soon after, I channeled that same boundless determination into the world of 0s and 1s in systems engineering.
+              At age 12, an acute viral infection severely impaired my motor nerves, requiring me to rely on a medical
+              respirator. Rather than accepting physical limitations, I chose to break boundaries on the canvas and was
+              honored with the <strong>2016 Presidential Education Award (Arts)</strong>. Soon after, I channeled that
+              same boundless determination into the world of 0s and 1s in systems engineering.
             </span>
             <span data-lang="zh">
-              12 歲那年，一場罕見病毒重創了我的運動神經，讓我必須與呼吸器共存。面對身體的限制，我選擇在畫布上突破框架，於 <strong>2016 年獲頒總統教育獎（藝術領域）</strong>；隨後，我將這份突破限制的毅力，完全投注於 0 與 1 的系統工程世界。
+              12 歲那年，一場罕見病毒重創了我的運動神經，讓我必須與呼吸器共存。面對身體的限制，我選擇在畫布上突破框架，於 <strong>2016
+                年獲頒總統教育獎（藝術領域）</strong>；隨後，我將這份突破限制的毅力，完全投注於 0 與 1 的系統工程世界。
             </span>
           </p>
           <p>
             <span data-lang="en">
-              From Chang Gung University to my Master's at NTUST, I dedicated myself to operating system kernels, low-level device drivers, and NAND Flash storage architectures, which led to receiving the <strong>Presidential Education Award for the second time in 2023 (Science &amp; Technology)</strong>. Today, stepping into the industry with silicon validation and performance optimization experience cultivated at Google, I continue to delve deep into ARM64 architecture and system software/firmware engineering.
+              From Chang Gung University to my Master's at NTUST, I dedicated myself to operating system kernels,
+              low-level device drivers, and NAND Flash storage architectures, which led to receiving the
+              <strong>Presidential Education Award for the second time in 2023 (Science &amp; Technology)</strong>.
+              Today, stepping into the industry with silicon validation and performance optimization experience
+              cultivated at Google, I continue to delve deep into ARM64 architecture and system software/firmware
+              engineering.
             </span>
             <span data-lang="zh">
-              從長庚資工到臺科大資工所，我專注於作業系統核心、底層驅動與 NAND Flash 儲存架構的鑽研，並於 <strong>2023 年二度榮獲總統教育獎（科技領域）</strong>。如今，我已正式步入業界，帶著在 Google 團隊累積的 Silicon Validation 與效能優化經驗，持續在 ARM64 架構與底層軟韌體領域深耕。
+              從長庚資工到臺科大資工所，我專注於作業系統核心、底層驅動與 NAND Flash 儲存架構的鑽研，並於 <strong>2023 年二度榮獲總統教育獎（科技領域）</strong>。如今，我已正式步入業界，帶著在
+              Google 團隊累積的 Silicon Validation 與效能優化經驗，持續在 ARM64 架構與底層軟韌體領域深耕。
             </span>
           </p>
-
-          <div class="mission-box">
-            <p>
-              <span data-lang="en">
-                "My mission is to fuse low-level systems engineering with machine learning to develop intelligent assistive devices that decode neurological and muscular signals. Through the power of technology, I aspire to empower individuals battling neurological disorders and muscular atrophy to reclaim their independence and hope."
-              </span>
-              <span data-lang="zh">
-                「我的使命是融合深度的底層系統工程與機器學習，研發能精準解析腦神經與肌肉訊號的智能輔具。我期望用技術的力量，讓受神經受損與肌無力所苦的病友，重新奪回生活的自主與希望。」
-              </span>
-            </p>
-          </div>
         </div>
 
-        <!-- Story Photo Placeholder -->
-        <div class="story-media">
-          <div class="media-placeholder" id="placeholder-story" data-auto-img="story.jpg">
-            <!-- To replace with your story photo, add: <img src="story.jpg" alt="Presidential Education Award"> -->
-            <div class="icon-wrapper">
-              <i class="fa-solid fa-landmark"></i>
+        <!-- Story Photo with Tag Overlay & Zoom -->
+        <div class="story-media lightbox-trigger" data-lightbox="single" data-img-src="story.jpg"
+          data-tag-en="National Honor" data-tag-zh="國家榮譽"
+          data-title-en="Presidential Education Award Ceremony with the President" data-title-zh="獲總統親自接見與授獎合影">
+          <div class="story-photo-frame">
+            <img src="story.jpg" alt="Presidential Education Award Ceremony" class="story-img" loading="lazy">
+            <div class="story-overlay">
+              <span class="story-tag" data-lang="en">National Honor</span>
+              <span class="story-tag" data-lang="zh">國家榮譽</span>
+              <h4 class="story-caption">
+                <span data-lang="en">Presidential Education Award Ceremony</span>
+                <span data-lang="zh">總統教育獎頒獎典禮現場</span>
+              </h4>
             </div>
-            <h4>
-              <span data-lang="en">Presidential Education Award Ceremony</span>
-              <span data-lang="zh">總統教育獎頒獎照片</span>
-            </h4>
-            <p>
-              <span data-lang="en">Reserved for your award photo with the President</span>
-              <span data-lang="zh">預留給您與總統的合照</span>
-            </p>
-            <code>source/about/story.jpg</code>
+            <div class="story-zoom-hint" title="Zoom image">
+              <i class="fa-solid fa-expand"></i>
+            </div>
           </div>
+        </div>
+      </div>
+
+      <!-- Standalone Mission Banner -->
+      <div class="mission-banner">
+        <div class="mission-banner-icon">
+          <i class="fa-solid fa-quote-left"></i>
+        </div>
+        <div class="mission-banner-content">
+          <div class="mission-badge">
+            <i class="fa-solid fa-compass"></i>
+            <span data-lang="en">Vision &amp; Core Mission</span>
+            <span data-lang="zh">願景與核心使命</span>
+          </div>
+          <blockquote class="mission-quote">
+            <span data-lang="en">
+              "My mission is to fuse low-level systems engineering with machine learning to develop intelligent
+              assistive devices that decode neurological and muscular signals. Through the power of technology, I aspire
+              to empower individuals battling neurological disorders and muscular atrophy to reclaim their independence
+              and hope."
+            </span>
+            <span data-lang="zh">
+              「我的使命是融合深度的底層系統工程與機器學習，研發能精準解析腦神經與肌肉訊號的智能輔具。我期望用技術的力量，讓受神經受損與肌無力所苦的病友，重新奪回生活的自主與希望。」
+            </span>
+          </blockquote>
         </div>
       </div>
     </div>
@@ -254,125 +291,152 @@
       <div class="timeline">
         <!-- Experience 1: Google -->
         <div class="timeline-item">
-          <div class="timeline-header">
-            <div>
-              <h3 class="timeline-role" data-lang="en">Associate Software Engineer</h3>
-              <h3 class="timeline-role" data-lang="zh">Associate Software Engineer</h3>
-              <div class="timeline-company">
-                <i class="fa-brands fa-google"></i>
-                <span>Google</span>
-              </div>
+          <div class="timeline-node">
+            <div class="node-dot">
+              <i class="fa-brands fa-google"></i>
             </div>
-            <span class="timeline-date">Sep 2024 - Aug 2026</span>
           </div>
-          <ul class="timeline-desc">
-            <li>
-              <span data-lang="en">Led low-level driver development and pre-silicon EDA bring-up for a flagship mobile
-                SoC's ISP accelerator, managing power/reset sequences and multi-frame stripe DMA programming.</span>
-              <span data-lang="zh">主導旗艦手機 SoC 之 ISP 加速器底層驅動開發與 pre-silicon EDA bring-up，負責電源重置時序、多幀 stripe DMA
-                硬體行為驗證。</span>
-            </li>
-            <li>
-              <span data-lang="en">Eliminated premature power-off system hangs during dynamic block power-gating by
-                engineering a context-switch counter across dual round-robin hardware threads for deterministic shutdown
-                synchronization.</span>
-              <span data-lang="zh">透過雙輪詢（round-robin）硬體執行緒設計 context-switch
-                計數器，解決動態電源門控（power-gating）期間之系統當機問題，實現精準關機同步。</span>
-            </li>
-            <li>
-              <span data-lang="en">Refactored a Python ISP golden data tool by migrating to a monorepo, decoupling
-                pattern-level Bazel dependencies, and caching pre-built GCS binaries, slashing runtime from ~15 mins to
-                &lt;40s.</span>
-              <span data-lang="zh">重構 Python ISP golden data 工具鏈，遷移至 monorepo、解耦 Bazel pattern 級依賴並導入 GCS 快取，將執行耗時自 ~15
-                分鐘驟降至 40 秒以內。</span>
-            </li>
-            <li>
-              <span data-lang="en">Built an automated CI/CD golden data pipeline (Python/Bash) to prevent C-Model
-                version drift, utilizing syscall sandboxing and Git sparse-checkout to selectively update modified
-                patterns in a 200GB+ repo.</span>
-              <span data-lang="zh">建置自動化 CI/CD pipeline（Python/Bash），結合系統呼叫沙盒與 Git sparse-checkout，高效驗證 200GB+ 大型代碼庫之
-                C-Model 版本一致性。</span>
-            </li>
-          </ul>
-          <div class="skill-pills">
-            <span class="pill">Device Drivers</span>
-            <span class="pill">Pre-Silicon EDA Bring-up</span>
-            <span class="pill">Stripe DMA</span>
-            <span class="pill">Power-Gating &amp; IRQ</span>
-            <span class="pill">Python &amp; Bazel</span>
-            <span class="pill">CI/CD Pipeline</span>
+          <div class="timeline-card">
+            <div class="timeline-header">
+              <div>
+                <h3 class="timeline-role" data-lang="en">Associate Software Engineer</h3>
+                <h3 class="timeline-role" data-lang="zh">Associate Software Engineer</h3>
+                <div class="timeline-company">
+                  <i class="fa-brands fa-google"></i>
+                  <span>Google</span>
+                </div>
+              </div>
+              <span class="timeline-date">Sep 2024 - Aug 2026</span>
+            </div>
+            <ul class="timeline-desc">
+              <li>
+                <span data-lang="en">Led low-level driver development and pre-silicon EDA bring-up for a flagship mobile
+                  SoC's ISP accelerator, managing power/reset sequences and multi-frame stripe DMA programming.</span>
+                <span data-lang="zh">主導旗艦手機 SoC 之 ISP 加速器底層驅動開發與 pre-silicon EDA bring-up，負責電源重置時序、多幀 stripe DMA
+                  硬體行為驗證。</span>
+              </li>
+              <li>
+                <span data-lang="en">Eliminated premature power-off system hangs during dynamic block power-gating by
+                  engineering a context-switch counter across dual round-robin hardware threads for deterministic
+                  shutdown
+                  synchronization.</span>
+                <span data-lang="zh">透過雙輪詢（round-robin）硬體執行緒設計 context-switch
+                  計數器，解決動態電源門控（power-gating）期間之系統當機問題，實現精準關機同步。</span>
+              </li>
+              <li>
+                <span data-lang="en">Refactored a Python ISP golden data tool by migrating to a monorepo, decoupling
+                  pattern-level Bazel dependencies, and caching pre-built GCS binaries, slashing runtime from ~15 mins
+                  to
+                  &lt;40s.</span>
+                <span data-lang="zh">重構 Python ISP golden data 工具鏈，遷移至 monorepo、解耦 Bazel pattern 級依賴並導入 GCS 快取，將執行耗時自
+                  ~15
+                  分鐘驟降至 40 秒以內。</span>
+              </li>
+              <li>
+                <span data-lang="en">Built an automated CI/CD golden data pipeline (Python/Bash) to prevent C-Model
+                  version drift, utilizing syscall sandboxing and Git sparse-checkout to selectively update modified
+                  patterns in a 200GB+ repo.</span>
+                <span data-lang="zh">建置自動化 CI/CD pipeline（Python/Bash），結合系統呼叫沙盒與 Git sparse-checkout，高效驗證 200GB+ 大型代碼庫之
+                  C-Model 版本一致性。</span>
+              </li>
+            </ul>
+            <div class="skill-pills">
+              <span class="pill">C/C++</span>
+              <span class="pill">Device Driver</span>
+              <span class="pill">Pre-Silicon EDA Bring-up</span>
+              <span class="pill">Stripe DMA</span>
+              <span class="pill">Power-Gating &amp; IRQ</span>
+              <span class="pill">Python &amp; Bazel</span>
+              <span class="pill">CI/CD Pipeline</span>
+            </div>
           </div>
         </div>
 
         <!-- Experience 2: Innodisk -->
         <div class="timeline-item">
-          <div class="timeline-header">
-            <div>
-              <h3 class="timeline-role" data-lang="en">Firmware Engineer Intern</h3>
-              <h3 class="timeline-role" data-lang="zh">韌體實習工程師</h3>
-              <div class="timeline-company">
-                <i class="fa-solid fa-hard-drive"></i>
-                <span data-lang="en">Innodisk Corporation (宜鼎國際)</span>
-                <span data-lang="zh">宜鼎國際股份有限公司</span>
-              </div>
+          <div class="timeline-node">
+            <div class="node-dot">
+              <i class="fa-solid fa-hard-drive"></i>
             </div>
-            <span class="timeline-date">Jul 2023 - Aug 2023</span>
           </div>
-          <ul class="timeline-desc">
-            <li>
-              <span data-lang="en">Developed a RAMDISK project focusing on data retention and embedded storage.</span>
-              <span data-lang="zh">參與 RAMDISK 專案研發，專注於高速嵌入式儲存與資料持久化（Data Retention）。</span>
-            </li>
-            <li>
-              <span data-lang="en">Wrote firmware enabling DRAM to save data to SSD during sudden power loss.</span>
-              <span data-lang="zh">撰寫底層韌體，使系統在遭遇異常斷電時能將 DRAM 快取資料即刻安全回寫至 SSD。</span>
-            </li>
-            <li>
-              <span data-lang="en">Implemented data restoration to DRAM upon subsequent power-up.</span>
-              <span data-lang="zh">實作資料還原機制，於下次開機通電時自動將資料自 SSD 完整恢復至 DRAM。</span>
-            </li>
-          </ul>
-          <div class="skill-pills">
-            <span class="pill">Firmware</span>
-            <span class="pill">RAMDISK</span>
-            <span class="pill">Data Retention</span>
-            <span class="pill">Power-Loss Protection</span>
-            <span class="pill">SSD Storage</span>
+          <div class="timeline-card">
+            <div class="timeline-header">
+              <div>
+                <h3 class="timeline-role" data-lang="en">Firmware Engineer Intern</h3>
+                <h3 class="timeline-role" data-lang="zh">韌體實習工程師</h3>
+                <div class="timeline-company">
+                  <i class="fa-solid fa-hard-drive"></i>
+                  <span data-lang="en">Innodisk Corporation (宜鼎國際)</span>
+                  <span data-lang="zh">宜鼎國際股份有限公司</span>
+                </div>
+              </div>
+              <span class="timeline-date">Jul 2023 - Aug 2023</span>
+            </div>
+            <ul class="timeline-desc">
+              <li>
+                <span data-lang="en">Developed a RAMDISK project focusing on data retention and embedded storage.</span>
+                <span data-lang="zh">參與 RAMDISK 專案研發，專注於高速嵌入式儲存與資料持久化（Data Retention）。</span>
+              </li>
+              <li>
+                <span data-lang="en">Wrote firmware enabling DRAM to save data to SSD during sudden power loss.</span>
+                <span data-lang="zh">撰寫底層韌體，使系統在遭遇異常斷電時能將 DRAM 快取資料即刻安全回寫至 SSD。</span>
+              </li>
+              <li>
+                <span data-lang="en">Implemented data restoration to DRAM upon subsequent power-up.</span>
+                <span data-lang="zh">實作資料還原機制，於下次開機通電時自動將資料自 SSD 完整恢復至 DRAM。</span>
+              </li>
+            </ul>
+            <div class="skill-pills">
+              <span class="pill">C</span>
+              <span class="pill">Firmware</span>
+              <span class="pill">RAMDISK</span>
+              <span class="pill">Data Retention</span>
+              <span class="pill">Power-Loss Protection</span>
+              <span class="pill">SSD Storage</span>
+            </div>
           </div>
         </div>
 
         <!-- Experience 3: Mathison Technology -->
         <div class="timeline-item">
-          <div class="timeline-header">
-            <div>
-              <h3 class="timeline-role" data-lang="en">AI Software Engineer</h3>
-              <h3 class="timeline-role" data-lang="zh">AI 軟體工程師</h3>
-              <div class="timeline-company">
-                <i class="fa-solid fa-chart-line"></i>
-                <span data-lang="en">Mathison Technology (麥錫森智能科技)</span>
-                <span data-lang="zh">麥錫森智能科技股份有限公司</span>
-              </div>
+          <div class="timeline-node">
+            <div class="node-dot">
+              <i class="fa-solid fa-chart-line"></i>
             </div>
-            <span class="timeline-date">Jul 2022 - Aug 2022</span>
           </div>
-          <ul class="timeline-desc">
-            <li>
-              <span data-lang="en">Built specialized NLP sentiment models (finBERT, word2Vec, GRU, LSTM) to parse
-                Taiwanese market financial disclosures and news streams.</span>
-              <span data-lang="zh">建立金融情緒分析模型（finBERT、word2Vec、GRU、LSTM），分析台灣證券市場新聞與重大財報資訊。</span>
-            </li>
-            <li>
-              <span data-lang="en">Developed distributed web scrapers for stock exchange filings and analyzed empirical
-                correlation with stock price fluctuations.</span>
-              <span data-lang="zh">開發證交所與財經新聞爬蟲系統，深入研究市場重大訊息與個股波動之相關性。</span>
-            </li>
-          </ul>
-          <div class="skill-pills">
-            <span class="pill">NLP / finBERT</span>
-            <span class="pill">word2Vec</span>
-            <span class="pill">GRU &amp; LSTM</span>
-            <span class="pill">Financial Analytics</span>
-            <span class="pill">Python</span>
+          <div class="timeline-card">
+            <div class="timeline-header">
+              <div>
+                <h3 class="timeline-role" data-lang="en">AI Software Engineer</h3>
+                <h3 class="timeline-role" data-lang="zh">AI 軟體工程師</h3>
+                <div class="timeline-company">
+                  <i class="fa-solid fa-chart-line"></i>
+                  <span data-lang="en">Mathison Technology (麥錫森智能科技)</span>
+                  <span data-lang="zh">麥錫森智能科技股份有限公司</span>
+                </div>
+              </div>
+              <span class="timeline-date">Jul 2022 - Aug 2022</span>
+            </div>
+            <ul class="timeline-desc">
+              <li>
+                <span data-lang="en">Built specialized NLP sentiment models (finBERT, word2Vec, GRU, LSTM) to parse
+                  Taiwanese market financial disclosures and news streams.</span>
+                <span data-lang="zh">建立金融情緒分析模型（finBERT、word2Vec、GRU、LSTM），分析台灣證券市場新聞與重大財報資訊。</span>
+              </li>
+              <li>
+                <span data-lang="en">Developed distributed web scrapers for stock exchange filings and analyzed
+                  empirical
+                  correlation with stock price fluctuations.</span>
+                <span data-lang="zh">開發證交所與財經新聞爬蟲系統，深入研究市場重大訊息與個股波動之相關性。</span>
+              </li>
+            </ul>
+            <div class="skill-pills">
+              <span class="pill">NLP / finBERT</span>
+              <span class="pill">word2Vec</span>
+              <span class="pill">GRU &amp; LSTM</span>
+              <span class="pill">Financial Analytics</span>
+              <span class="pill">Python</span>
+            </div>
           </div>
         </div>
       </div>
@@ -413,8 +477,10 @@
             <span data-lang="zh">國立臺灣科技大學碩士論文 (2025)</span>
           </div>
 
-          <!-- Architecture Diagram Placeholder -->
-          <div class="project-media">
+          <!-- Architecture Diagram -->
+          <div class="project-media lightbox-trigger" data-lightbox="single" data-img-src="thesis_arch.png"
+            data-tag-en="FTL Architecture" data-tag-zh="FTL 系統架構"
+            data-title-en="SAM: TLC NAND Flash Adaptive Management Architecture" data-title-zh="SAM: TLC 快閃記憶體自適應管理架構圖">
             <div class="media-placeholder" id="placeholder-thesis" data-auto-img="thesis_arch.png">
               <div class="icon-wrapper"><i class="fa-solid fa-diagram-project"></i></div>
               <h4>
@@ -422,6 +488,13 @@
                 <span data-lang="zh">系統架構圖</span>
               </h4>
               <code>source/about/thesis_arch.png</code>
+            </div>
+            <div class="media-zoom-overlay">
+              <span class="zoom-badge">
+                <i class="fa-solid fa-magnifying-glass-plus"></i>
+                <span data-lang="en">Click to Zoom</span>
+                <span data-lang="zh">點擊放大檢視</span>
+              </span>
             </div>
           </div>
 
@@ -507,8 +580,11 @@
             <span data-lang="zh">2022 臺大大健康創業創意競賽「特別獎」</span>
           </div>
 
-          <!-- Project Photo Placeholder -->
-          <div class="project-media">
+          <!-- Project Photo -->
+          <div class="project-media lightbox-trigger" data-lightbox="single" data-img-src="diasensor.jpg"
+            data-tag-en="Competition Award" data-tag-zh="競賽獲獎"
+            data-title-en="Dia-Sensor: Automated Diabetic Foot Screening Station"
+            data-title-zh="Dia-Sensor 自動化糖尿病足檢測系統">
             <div class="media-placeholder" id="placeholder-diasensor" data-auto-img="diasensor.jpg">
               <div class="icon-wrapper"><i class="fa-solid fa-image"></i></div>
               <h4>
@@ -516,6 +592,13 @@
                 <span data-lang="zh">專案成果照片</span>
               </h4>
               <code>source/about/diasensor.jpg</code>
+            </div>
+            <div class="media-zoom-overlay">
+              <span class="zoom-badge">
+                <i class="fa-solid fa-magnifying-glass-plus"></i>
+                <span data-lang="en">Click to Zoom</span>
+                <span data-lang="zh">點擊放大檢視</span>
+              </span>
             </div>
           </div>
 
@@ -561,12 +644,15 @@
           </h3>
           <div class="project-award">
             <i class="fa-solid fa-trophy"></i>
-            <span data-lang="en">5G Pioneer Innovation Competition Finalist</span>
-            <span data-lang="zh">5G 領航創新應用競賽初賽入圍</span>
+            <span data-lang="en">2022 5G Pioneer Innovation Competition Finalist</span>
+            <span data-lang="zh">2022 5G 領航創新應用競賽決賽入圍</span>
           </div>
 
-          <!-- Project Photo Placeholder -->
-          <div class="project-media">
+          <!-- Project Photo -->
+          <div class="project-media lightbox-trigger" data-lightbox="single" data-img-src="sparkvideo.jpg"
+            data-tag-en="AI &amp; Multimedia" data-tag-zh="AI 多媒體辨識"
+            data-title-en="Spark Video: Intelligent Video Highlight &amp; Music Platform"
+            data-title-zh="Spark Video 運動影像辨識與音樂生成平台">
             <div class="media-placeholder" id="placeholder-sparkvideo" data-auto-img="sparkvideo.jpg">
               <div class="icon-wrapper"><i class="fa-solid fa-image"></i></div>
               <h4>
@@ -574,6 +660,13 @@
                 <span data-lang="zh">專案成果照片</span>
               </h4>
               <code>source/about/sparkvideo.jpg</code>
+            </div>
+            <div class="media-zoom-overlay">
+              <span class="zoom-badge">
+                <i class="fa-solid fa-magnifying-glass-plus"></i>
+                <span data-lang="en">Click to Zoom</span>
+                <span data-lang="zh">點擊放大檢視</span>
+              </span>
             </div>
           </div>
 
@@ -664,8 +757,8 @@
               <span data-lang="zh">鴻海科技集團「鴻海獎學鯨」</span>
             </h4>
             <p>
-              <span data-lang="en">Recipient across 4 consecutive editions (4th, 5th, 6th &amp; latest).</span>
-              <span data-lang="zh">連續四屆得主（第四屆、第五屆、第六屆等），肯定堅毅自強精神。</span>
+              <span data-lang="en">Recipient across 4 editions (4th, 5th, 6th &amp; 8th).</span>
+              <span data-lang="zh">（第四屆、第五屆、第六屆、第八屆等），肯定堅毅自強精神。</span>
             </p>
           </div>
         </div>
@@ -761,7 +854,9 @@
 
         <div class="bento-gallery">
           <!-- Item 1: Wide panoramic banner (award5.jpg) -->
-          <div class="bento-card bento-wide">
+          <div class="bento-card bento-wide lightbox-trigger" data-lightbox="gallery" data-img-src="award5.jpg"
+            data-tag-en="5G Innovation" data-tag-zh="5G 創新競賽" data-title-en="5G Pioneer Innovation Competition Finalist"
+            data-title-zh="5G 領航創新應用競賽決賽">
             <img src="award5.jpg" alt="5G Pioneer Innovation Competition Finalist" loading="lazy" class="bento-img">
             <div class="bento-overlay">
               <span class="bento-tag" data-lang="en">5G Innovation</span>
@@ -771,10 +866,15 @@
                 <span data-lang="zh">5G 領航創新應用競賽決賽</span>
               </h4>
             </div>
+            <div class="bento-zoom-hint" title="Zoom image">
+              <i class="fa-solid fa-expand"></i>
+            </div>
           </div>
 
           <!-- Item 2: Standard card (award1.jpg) -->
-          <div class="bento-card bento-standard">
+          <div class="bento-card bento-standard lightbox-trigger" data-lightbox="gallery" data-img-src="award1.jpg"
+            data-tag-en="Scholarship" data-tag-zh="優秀研發" data-title-en="E.SUN Talents Fellowship Ceremony"
+            data-title-zh="玉山金控 E.SUN 獎學金頒獎典禮">
             <img src="award1.jpg" alt="E.SUN Talents Scholarship Award" loading="lazy" class="bento-img">
             <div class="bento-overlay">
               <span class="bento-tag" data-lang="en">Scholarship</span>
@@ -784,10 +884,15 @@
                 <span data-lang="zh">玉山金控 E.SUN 獎學金頒獎典禮</span>
               </h4>
             </div>
+            <div class="bento-zoom-hint" title="Zoom image">
+              <i class="fa-solid fa-expand"></i>
+            </div>
           </div>
 
           <!-- Item 3: Standard card (award2.jpg) -->
-          <div class="bento-card bento-standard">
+          <div class="bento-card bento-standard lightbox-trigger" data-lightbox="gallery" data-img-src="award2.jpg"
+            data-tag-en="Fellowship" data-tag-zh="自強不息" data-title-en="Foxconn Scholarship Whale Award"
+            data-title-zh="鴻海科技集團 鴻海獎學鯨授獎">
             <img src="award2.jpg" alt="Foxconn Scholarship Whale Award" loading="lazy" class="bento-img">
             <div class="bento-overlay">
               <span class="bento-tag" data-lang="en">Fellowship</span>
@@ -797,10 +902,15 @@
                 <span data-lang="zh">鴻海科技集團 鴻海獎學鯨授獎</span>
               </h4>
             </div>
+            <div class="bento-zoom-hint" title="Zoom image">
+              <i class="fa-solid fa-expand"></i>
+            </div>
           </div>
 
           <!-- Item 4: Standard card (award3.jpg) -->
-          <div class="bento-card bento-standard">
+          <div class="bento-card bento-standard lightbox-trigger" data-lightbox="gallery" data-img-src="award3.jpg"
+            data-tag-en="Golden Eagle" data-tag-zh="金鷹獎"
+            data-title-en="27th Golden Eagle Award for Persons with Disabilities" data-title-zh="第 27 屆身心障礙楷模金鷹獎">
             <img src="award3.jpg" alt="27th Golden Eagle Award for Persons with Disabilities" loading="lazy"
               class="bento-img">
             <div class="bento-overlay">
@@ -811,10 +921,15 @@
                 <span data-lang="zh">第 27 屆身心障礙楷模金鷹獎</span>
               </h4>
             </div>
+            <div class="bento-zoom-hint" title="Zoom image">
+              <i class="fa-solid fa-expand"></i>
+            </div>
           </div>
 
           <!-- Item 5: Standard card (ithelp.jpg) -->
-          <div class="bento-card bento-standard">
+          <div class="bento-card bento-standard lightbox-trigger" data-lightbox="gallery" data-img-src="ithelp.jpg"
+            data-tag-en="Community" data-tag-zh="社群貢獻" data-title-en="iThome Ironman 30-Day Trophy"
+            data-title-zh="iT 邦幫忙 30 天鐵人賽完賽紀念">
             <img src="ithelp.jpg" alt="iThome Ironman Trophy" loading="lazy" class="bento-img">
             <div class="bento-overlay">
               <span class="bento-tag" data-lang="en">Community</span>
@@ -824,10 +939,15 @@
                 <span data-lang="zh">iT 邦幫忙 30 天鐵人賽完賽紀念</span>
               </h4>
             </div>
+            <div class="bento-zoom-hint" title="Zoom image">
+              <i class="fa-solid fa-expand"></i>
+            </div>
           </div>
 
           <!-- Item 6: Wide panoramic banner (award6.jpg) -->
-          <div class="bento-card bento-wide">
+          <div class="bento-card bento-wide lightbox-trigger" data-lightbox="gallery" data-img-src="award6.jpg"
+            data-tag-en="Special Award" data-tag-zh="大健康特別獎"
+            data-title-en="2022 NTU Big Health Competition Special Award" data-title-zh="2022 臺大大健康創業創意競賽特別獎">
             <img src="award6.jpg" alt="2022 NTU Big Health Competition Special Award" loading="lazy" class="bento-img">
             <div class="bento-overlay">
               <span class="bento-tag" data-lang="en">Special Award</span>
@@ -836,6 +956,9 @@
                 <span data-lang="en">2022 NTU Big Health Competition Special Award</span>
                 <span data-lang="zh">2022 臺大大健康創業創意競賽特別獎</span>
               </h4>
+            </div>
+            <div class="bento-zoom-hint" title="Zoom image">
+              <i class="fa-solid fa-expand"></i>
             </div>
           </div>
         </div>
@@ -886,6 +1009,31 @@
       <p>© 2026 Shao-Cheng Wang (王紹丞). Built with passion, resilience, and curiosity.</p>
     </div>
   </footer>
+
+  <!-- Image Lightbox Modal -->
+  <div id="image-lightbox" class="lightbox-modal" aria-hidden="true" role="dialog" aria-label="Image Preview">
+    <div class="lightbox-backdrop"></div>
+    <div class="lightbox-container">
+      <button class="lightbox-close" aria-label="Close Preview" title="Close (Esc)">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+      <button class="lightbox-nav lightbox-prev" aria-label="Previous Image" title="Previous (Left Arrow)">
+        <i class="fa-solid fa-chevron-left"></i>
+      </button>
+      <button class="lightbox-nav lightbox-next" aria-label="Next Image" title="Next (Right Arrow)">
+        <i class="fa-solid fa-chevron-right"></i>
+      </button>
+      <div class="lightbox-content">
+        <div class="lightbox-image-wrap">
+          <img src="" alt="" class="lightbox-img" id="lightbox-img">
+        </div>
+        <div class="lightbox-caption" id="lightbox-caption">
+          <span class="lightbox-tag" id="lightbox-tag"></span>
+          <h3 class="lightbox-title" id="lightbox-title"></h3>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <!-- Scripts -->
   <script src="script.js"></script>
